@@ -1,4 +1,4 @@
--- 상단 버퍼 (탭) 표시 플러그인
+-- buffer visualizer
 return {
 	'akinsho/bufferline.nvim',
 	version = "*",
@@ -7,5 +7,3 @@ return {
 		require('bufferline').setup()
 	end,
 }
-
-

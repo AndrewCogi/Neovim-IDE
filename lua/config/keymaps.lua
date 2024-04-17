@@ -67,3 +67,9 @@ mapKey('<leader>fh', builtin.help_tags)
 -- normal 모드에서 ctrl+/ 로 주석처리, visual 모드에서 ctrl+/ 로 주석처리
 mapKey('<C-_>', '<Plug>kommentary_line_default')
 mapKey('<C-_>', '<Plug>kommentary_visual_default', 'x')
+
+-- [Plugin] nvim-lspconfig
+-- normal 모드에서 코드 문법에 대해 hover 하여 설명 보기
+mapKey('?', vim.lsp.buf.hover)
+mapKey('gd', vim.lsp.buf.definition)
+mapKey('<leader>ac', vim.lsp.buf.code_action)

@@ -94,7 +94,6 @@ ins_left {
 			n = colors.red,
 			i = colors.green,
 			v = colors.blue,
-			[''] = colors.blue,
 			V = colors.blue,
 			c = colors.magenta,
 			no = colors.red,
@@ -126,7 +125,7 @@ ins_left {
 ins_left {
 	'filename',
 	-- cond = conditions.buffer_not_empty,
-	cond = conditions.hide_in_width, 
+	cond = conditions.hide_in_width,
 	color = { fg = colors.magenta, gui = 'bold' },
 }
 
