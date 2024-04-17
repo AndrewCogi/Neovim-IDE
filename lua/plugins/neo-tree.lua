@@ -14,21 +14,16 @@ return {
 				winbar = true,
 				sources = {
 					{ source = "filesystem" },
-					{ source = "buffers" },
-					{ source = "document_symbols" },
+					-- { source = "buffers" },
 					{ source = "git_status" },
-				}
-			},
-			default_component_configs = {
-				name = {
-					highlight_opened_files = "all",
+					{ source = "document_symbols" },
 				}
 			},
 			sources = {
 				"filesystem",
-				"buffers",
-				"document_symbols",
+				-- "buffers",
 				"git_status",
+				"document_symbols",
 			},
 			buffers = {
 				bind_to_cwd = false,
