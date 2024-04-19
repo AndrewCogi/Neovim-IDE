@@ -26,7 +26,7 @@ opt.backup = false -- 백업파일 비활성화
 opt.writebackup = false -- 백업파일 비활성화
 opt.shortmess:append("c") -- -- User defined completion 메세지 숨김처리
 opt.updatetime = 200 -- completion 속도 향상
-opt.timeoutlen = 300 -- 단축키 입력 타임아웃 설정
+opt.timeoutlen = 250 -- 단축키 입력 타임아웃 설정
 opt.clipboard = "unnamedplus" -- 클립보드 붙여넣기 허용
 opt.incsearch = true -- 검색어 입력 실시간 찾기 활성화
 opt.hlsearch = true -- 검색결과 하이라이트 활성화
