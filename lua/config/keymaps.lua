@@ -73,3 +73,11 @@ mapKey('<C-_>', '<Plug>kommentary_visual_default', 'x')
 mapKey('?', vim.lsp.buf.hover)
 mapKey('gd', vim.lsp.buf.definition)
 mapKey('<leader>ac', vim.lsp.buf.code_action)
+
+-- [Plugin] nvim-ufo
+-- normal 모드에서 코드 블록 단위로 접고 펼치기
+-- za : 접기/펼치기
+-- zm : 그룹 접기
+mapKey('zM', require('ufo').closeAllFolds)
+-- zr : 그룹 펼치기
+mapKey('zR', require('ufo').openAllFolds)
