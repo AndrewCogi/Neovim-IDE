@@ -33,27 +33,37 @@ return {
 					documentation = cmp.config.window.bordered(),
 				},
 				mapping = cmp.mapping.preset.insert({
-					-- <C-n> : next mapping
-					-- <C-p> : previous mapping
-					["<C-b>"] = cmp.mapping.scroll_docs(-4),
-					["<C-f>"] = cmp.mapping.scroll_docs(4),
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<C-e>"] = cmp.mapping.abort(),
 					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item.
+					['<C-j>'] = cmp.mapping(function (fallback)
+					if cmp.visible() then
+							cmp.scroll_docs(4)
+						else
+							fallback()
+						end
+					end, { 'i', 's' }),
+					['<C-k>'] = cmp.mapping(function (fallback)
+					if cmp.visible() then
+							cmp.scroll_docs(-4)
+						else
+							fallback()
+						end
+					end, { 'i', 's' }),
 					['<Tab>'] = cmp.mapping(function(fallback)
 					if cmp.visible() then
-						cmp.select_next_item()
+							cmp.select_next_item()
 						else
 							fallback()
 						end
-						end, { 'i', 's' }),
+					end, { 'i', 's' }),
 					['<S-Tab>'] = cmp.mapping(function(fallback)
 					if cmp.visible() then
-						cmp.select_prev_item()
+							cmp.select_prev_item()
 						else
 							fallback()
 						end
-						end, { 'i', 's' }),
+					end, { 'i', 's' }),
 				}),
 				-- autocompletion sources
 				sources = cmp.config.sources({

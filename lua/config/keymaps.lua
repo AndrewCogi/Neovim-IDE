@@ -71,7 +71,13 @@ mapKey('<C-_>', '<Plug>kommentary_visual_default', 'x')
 -- [Plugin] nvim-lspconfig
 -- normal 모드에서 코드 문법에 대해 hover 하여 설명 보기
 mapKey('?', vim.lsp.buf.hover)
+-- normal 모드에서 선언부 찾기
 mapKey('gd', vim.lsp.buf.definition)
+-- normal 모드에서 구현부 찾기
+mapKey('gi', vim.lsp.buf.implementation)
+-- normal 모드에서 사용처 찾기
+mapKey('gr', vim.lsp.buf.references)
+-- code action
 mapKey('<leader>ac', vim.lsp.buf.code_action)
 
 -- [Plugin] nvim-ufo
@@ -81,3 +87,7 @@ mapKey('<leader>ac', vim.lsp.buf.code_action)
 mapKey('zM', require('ufo').closeAllFolds)
 -- zr : 그룹 펼치기
 mapKey('zR', require('ufo').openAllFolds)
+
+-- [Plugin] hop
+-- normal 모드에서 단어찾아 커서이동
+mapKey('<leader>s', require('hop').hint_char2)
