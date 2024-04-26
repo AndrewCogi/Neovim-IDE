@@ -40,6 +40,10 @@ mapKey('>', '>gv', 'v')
 -- normal 모드에서 search highlight 삭제
 mapKey('<leader>h', ':nohlsearch<CR>')
 
+-- diagnostic 찾기
+mapKey(']c', vim.diagnostic.goto_next)
+mapKey('[c', vim.diagnostic.goto_prev)
+
 
 -- [Plugin] neo-tree
 -- file explorer 열고 닫기
@@ -91,3 +95,19 @@ mapKey('zR', require('ufo').openAllFolds)
 -- [Plugin] hop
 -- normal 모드에서 단어찾아 커서이동
 mapKey('<leader>s', require('hop').hint_char2)
+
+-- [Plugin] FTerm
+-- normal 모드에서 터미널 창 띄우기 
+mapKey('<leader>t', require('FTerm').toggle)
+
+-- [Plugin] nvim-dap-ui
+-- normal 모드에서 debugger 창 띄우기
+mapKey('<leader>do', ":DapUIOpen<CR>")
+-- normal 모드에서 debugger 창 닫기
+mapKey('<leader>dx', ":DapUIClose<CR>")
+
+-- [Plugin] noice
+-- normal 모드에서 메세지 기록 보기
+mapKey('<leader>ms', function() require('noice').cmd("all") end)
+-- normal 모드에서 마지막 메세지 보기
+mapKey('<leader>ml', function() require('noice').cmd("last") end)
