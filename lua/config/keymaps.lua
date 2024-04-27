@@ -111,3 +111,20 @@ mapKey('<leader>dx', ":DapUIClose<CR>")
 mapKey('<leader>ms', function() require('noice').cmd("all") end)
 -- normal 모드에서 마지막 메세지 보기
 mapKey('<leader>ml', function() require('noice').cmd("last") end)
+
+-- [Plugin] gitsigns
+-- normal 모드에서 git change 다음 지점으로 이동
+mapKey(']g', require('gitsigns').next_hunk)
+mapKey('[g', require('gitsigns').prev_hunk)
+-- normal 모드에서 git change 등록하기(A:현재파일 전체)
+mapKey('ga', require('gitsigns').stage_hunk)
+mapKey('gA', require('gitsigns').stage_buffer)
+-- normal 모드에서 git change 취소하기
+mapKey('gu', require('gitsigns').undo_stage_hunk)
+-- normal 모드에서 git change 변경사항 폐기 및 원상복귀(U:현재파일 전체)
+mapKey('gr', require('gitsigns').reset_hunk)
+mapKey('gR', require('gitsigns').reset_buffer)
+-- normal 모드에서 파일 변경점 확인하기
+mapKey('gd', require('gitsigns').diffthis)
+-- normal 모드에서 코드 변경자 확인하기
+mapKey('gb', function() require('gitsigns').blame_line{full=true} end)
