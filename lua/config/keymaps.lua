@@ -158,3 +158,34 @@ mapKey('gi', vim.lsp.buf.implementation)
 mapKey('gr', vim.lsp.buf.references)
 -- code action
 mapKey('<leader>ac', vim.lsp.buf.code_action)
+
+
+-- [Plugin] nvim-dap
+-- normal 모드에서 dap ui 열고 닫기
+mapKey('<leader>du', function() require("dapui").toggle({ }) end)
+-- normal 모드에서 toggle breakpoint (with condition 지정)
+mapKey('<leader>dB', function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end)
+-- normal 모드에서 toggle breakpoint
+mapKey('<leader>db', function() require("dap").set_breakpoint() end)
+-- normal 모드에서 continue
+mapKey('<leader>dc', function() require("dap").continue() end)
+-- normal 모드에서 run with args
+mapKey('<leader>da', function() require("dap").continue({ before = get_args }) end)
+-- normal 모드에서 run to cursor
+mapKey('<leader>dC', function() require("dap").run_to_cursor() end)
+-- normal 모드에서 go to line (no execute)
+mapKey('<leader>dg', function() require("dap").goto_() end)
+-- normal 모드에서 step into
+mapKey('<leader>di', function() require("dap").step_into() end)
+-- normal 모드에서 step over
+mapKey('<leader>do', function() require("dap").step_over() end)
+-- normal 모드에서 step out
+mapKey('<leader>dO', function() require("dap").step_out() end)
+-- normal 모드에서 pause
+mapKey('<leader>dp', function() require("dap").pause() end)
+-- normal 모드에서 toggle repl
+mapKey('<leader>dr', function() require("dap").repl.toggle() end)
+-- normal 모드에서 session
+mapKey('<leader>ds', function() require("dap").session() end)
+-- normal 모드에서 session
+mapKey('<leader>dt', function() require("dap").terminate() end)

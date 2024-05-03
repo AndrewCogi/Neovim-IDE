@@ -23,6 +23,7 @@ require("lazy").setup({
 		{ import = "plugins/clipboard" },
 		{ import = "plugins/coding" },
 		{ import = "plugins/colorscheme" },
+		{ import = "plugins/dap" },
 		{ import = "plugins/editor" },
 		{ import = "plugins/lint" },
 		{ import = "plugins/lsp" },
