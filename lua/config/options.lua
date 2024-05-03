@@ -41,10 +41,10 @@ vim.o.termkey = '<C-V>'
 
 -- 파일 열기 마지막 부분 저장
 vim.cmd([[
-	if has("autocmd")
-	autocmd BufReadPost *
-	\ if line("'\"") > 0 && line("'\"") <= line("$") |
-	\ exe "normal g'\"" |
-	\ endif
-	endif
+   if has("autocmd")
+   autocmd BufReadPost *
+   \ if line("'\"") > 0 && line("'\"") <= line("$") |
+   \ exe "normal g'\"" |
+   \ endif
+   endif
 ]])
