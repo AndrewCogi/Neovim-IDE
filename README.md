@@ -15,8 +15,12 @@ My Personal Integrated Development Environment (for java)
 
 **Install DalMuDee_v2 in ONE command**
 
-❗️ `bash <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/Installer_DalMuDee_v2.sh)`
+```bash
+bash <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/Installer_DalMuDee_v2.sh)
+```
 
 **Install Java17 & Springboot3 in ONE command**
 
-❗️ `bash <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/Installer_Java17_Springboot3.sh)`
+```bash
+bash <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/Installer_Java17_Springboot3.sh)
+```
