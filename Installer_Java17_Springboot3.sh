@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -i
 
 set -o nounset		# 미선언 변수 접근 시 에러처리
 set -o errexit 		# 에러 발생 시 중지
