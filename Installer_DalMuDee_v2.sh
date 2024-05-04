@@ -24,6 +24,20 @@ install_DalMuDee_v2_config() { \
 	git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 }
 
+ask_reboot() { \
+	echo "[Install_DalMuDee_v2_config.sh] Reboot required."
+	echo -n "[Install_DalMuDee_v2_config.sh] Would you like to reboot to complete the installation of Neovim? (y/n) "
+	read answer
+	[ "$answer" != "${answer#[Yy]}" ] && reboot
+}
+
+reboot() { \
+	echo "[Install_DalMuDee_v2_config.sh] After reboot, You can run neovim using the 'nvim' command."
+	echo "[Install_DalMuDee_v2_config.sh] (First time running, it may take some time due to plugin installation)"
+	echo "[Install_DalMuDee_v2_config.sh] See you soon!"
+	sudo reboot now
+}
+
 
 echo "[Install_DalMuDee_v2_config.sh] Welcome to DalMuDee_v2 installer"
 
@@ -40,6 +54,7 @@ echo "[Install_DalMuDee_v2_config.sh] Installing DalMuDee_v2 config..."
 install_DalMuDee_v2_config
 
 echo "[Install_DalMuDee_v2_config.sh] Installation Complete!"
-echo "[Install_DalMuDee_v2_config.sh] Run "source ~/.bashrc" and then use the "nvim" command to run neovim (first time only)."
-echo "[Install_DalMuDee_v2_config.sh] You can now run neovim using the nvim command."
+ask_reboot
+
+echo "[Install_DalMuDee_v2_config.sh] After reboot, You can run neovim using the 'nvim' command."
 echo "[Install_DalMuDee_v2_config.sh] (First time running, it may take some time due to plugin installation)"
