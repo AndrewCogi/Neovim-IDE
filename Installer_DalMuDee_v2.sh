@@ -55,6 +55,3 @@ install_DalMuDee_v2_config
 
 echo "[Install_DalMuDee_v2_config.sh] Installation Complete!"
 ask_reboot
-
-echo "[Install_DalMuDee_v2_config.sh] After reboot, You can run neovim using the 'nvim' command."
-echo "[Install_DalMuDee_v2_config.sh] (First time running, it may take some time due to plugin installation)"
