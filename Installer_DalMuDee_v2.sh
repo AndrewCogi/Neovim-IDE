@@ -15,7 +15,7 @@ install_neovim() { \
 	sudo rm -f nvim-linux64.tar.gz
 	export PATH="$PATH:/opt/nvim-linux64/bin"
 	echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.bashrc
-	source ~/.bashrc
+	. ~/.bashrc
 }
 
 install_prerequisite() { \
