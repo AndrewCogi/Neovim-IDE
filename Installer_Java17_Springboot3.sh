@@ -1,7 +1,7 @@
-#!/bin/bash -i
+#!/bin/bash
 
-set -o nounset		# 미선언 변수 접근 시 에러처리
-set -o errexit 		# 에러 발생 시 중지
+# set -o nounset		# 미선언 변수 접근 시 에러처리
+# set -o errexit 		# 에러 발생 시 중지
 
 init() { \
 	sudo apt update
@@ -14,7 +14,7 @@ install_java17() { \
 
 install_sdkman() { \
 	curl -s https://get.sdkman.io | bash
-	. "$HOME/.sdkman/bin/sdkman-init.sh"
+	source $HOME/.sdkman/bin/sdkman-init.sh
 	sdk version
 }
 
