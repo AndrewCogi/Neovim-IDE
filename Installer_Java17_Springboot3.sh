@@ -8,6 +8,10 @@ init() { \
 	sudo apt upgrade -y
 }
 
+install_prerequisite() { \
+	sudo apt install make zip -y
+}
+
 install_java17() { \
 	sudo apt install openjdk-17-jdk -y
 }
@@ -27,6 +31,9 @@ echo "[Install_Java17_Springboot3.sh] Welcome to Java17_Springboot3 installer"
 
 echo "[Install_Java17_Springboot3.sh] Initializing..."
 init
+
+echo "[Install_Java17_Springboot3.sh] Installing prerequisite..."
+install_prerequisite
 
 echo "[Install_Java17_Springboot3.sh] Installing Java17..."
 install_java17
