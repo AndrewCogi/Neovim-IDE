@@ -14,7 +14,7 @@ install_java17() { \
 
 install_sdkman() { \
 	curl -s "https://get.sdkman.io" | bash
-	source "$HOME/.sdkman/bin/sdkman-init.sh"
+	. "$HOME/.sdkman/bin/sdkman-init.sh"
 	sdk version
 }
 
