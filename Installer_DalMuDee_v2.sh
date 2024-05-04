@@ -1,7 +1,7 @@
-#!/bin/bash -i
+#!/bin/bash
 
-set -o nounset		# 미선언 변수 접근 시 에러처리
-set -o errexit 		# 에러 발생 시 중지
+# set -o nounset		# 미선언 변수 접근 시 에러처리
+# set -o errexit 		# 에러 발생 시 중지
 
 init() { \
 	sudo apt update
@@ -13,7 +13,8 @@ install_neovim() { \
 	sudo rm -rf /opt/nvim
 	sudo tar -C /opt -xzf nvim-linux64.tar.gz
 	sudo rm -f nvim-linux64.tar.gz
-	echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.bashrc
+	echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> $HOME/.bashrc
+ 	source $HOME/.bashrc
 }
 
 install_prerequisite() { \
@@ -54,4 +55,4 @@ echo "[Install_DalMuDee_v2_config.sh] Installing DalMuDee_v2 config..."
 install_DalMuDee_v2_config
 
 echo "[Install_DalMuDee_v2_config.sh] Installation Complete!"
-ask_reboot
+# ask_reboot
