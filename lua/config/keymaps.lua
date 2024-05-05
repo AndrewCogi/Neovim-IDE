@@ -166,7 +166,7 @@ mapKey('<leader>du', function() require("dapui").toggle({ }) end)
 -- normal 모드에서 toggle breakpoint (with condition 지정)
 mapKey('<leader>dB', function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end)
 -- normal 모드에서 toggle breakpoint
-mapKey('<leader>db', function() require("dap").set_breakpoint() end)
+mapKey('<leader>db', function() require("dap").toggle_breakpoint() end)
 -- normal 모드에서 continue
 mapKey('<leader>dc', function() require("dap").continue() end)
 -- normal 모드에서 run with args
