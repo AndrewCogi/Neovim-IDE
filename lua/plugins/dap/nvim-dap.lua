@@ -12,7 +12,46 @@ return {
 				{ "<leader>du", function() require("dapui").toggle({ }) end, desc = "Dap UI" },
 				{ "<leader>de", function() require("dapui").eval() end, desc = "Eval", mode = {"n", "v"} },
 			}, ]]
-			opts = {},
+			opts = {
+				layouts = {
+					{
+						elements = {
+							{
+								id = "scopes",
+								size = 0.25
+							},
+							{
+								id = "breakpoints",
+								size = 0.25
+							},
+							{
+								id = "stacks",
+								size = 0.25
+							},
+							{
+								id = "watches",
+								size = 0.25
+							}
+						},
+						position = "left",
+						size = 40
+					},
+					{
+						elements = {
+							{
+								id = "console",
+								size = 0.7
+							},
+							{
+								id = "repl",
+								size = 0.3
+							}
+						},
+						position = "bottom",
+						size = 15
+					}
+				}
+			},
 			config = function(_, opts)
 				-- setup dap config by VsCode launch.json file
 				-- require("dap.ext.vscode").load_launchjs()
