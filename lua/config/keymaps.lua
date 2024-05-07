@@ -189,3 +189,26 @@ mapKey('<leader>dr', function() require("dap").repl.toggle() end)
 mapKey('<leader>ds', function() require("dap").session() end)
 -- normal 모드에서 session
 mapKey('<leader>dt', function() require("dap").terminate() end)
+
+
+-- maven pom.xml dependency & lsp 자동 업데이트
+local function UpdatePomFileDependenciesAndLspServer()
+	local current_file = vim.fn.expand('%:t')
+	local current_file_full_path = vim.fn.expand('%:p')
+	if current_file == "pom.xml" then
+		vim.notify("Update pom.xml...", vim.log.levels.INFO, { title = "maven" })
+		vim.cmd("!rm -r ~/.m2")
+		-- async
+		vim.loop.spawn("mvn", {
+			args = {"-f", current_file_full_path, "dependency:purge-local-repository", "dependency:resolve"}
+			}, function()
+				vim.schedule(function()
+					vim.cmd(":LspRestart")
+					vim.notify("Update pom.xml is Done!", vim.log.levels.INFO, { title = "maven" })
+				end)
+		end)
+	else
+		vim.notify("Your file is not pom.xml.\n(Current file : " .. current_file .. ")", vim.log.levels.WARN, { title = "maven" })
+	end
+end
+mapKey('<leader>//', function() UpdatePomFileDependenciesAndLspServer() end)
