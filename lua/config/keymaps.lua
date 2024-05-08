@@ -197,7 +197,7 @@ local function UpdatePomFileDependenciesAndLspServer()
 	local current_file_full_path = vim.fn.expand('%:p')
 	if current_file == "pom.xml" then
 		vim.notify("Update pom.xml...", vim.log.levels.INFO, { title = "maven" })
-		vim.cmd("!rm -r ~/.m2")
+		vim.cmd("silent !rm -r ~/.m2")
 		-- async
 		vim.loop.spawn("mvn", {
 			args = {"-f", current_file_full_path, "dependency:purge-local-repository", "dependency:resolve"}
@@ -205,6 +205,9 @@ local function UpdatePomFileDependenciesAndLspServer()
 				vim.schedule(function()
 					vim.cmd(":LspRestart")
 					vim.notify("Update pom.xml is Done!", vim.log.levels.INFO, { title = "maven" })
+					-- restart nvim-java plugin
+					require("java").setup()
+					require("lspconfig").jdtls.setup({})
 				end)
 		end)
 	else
