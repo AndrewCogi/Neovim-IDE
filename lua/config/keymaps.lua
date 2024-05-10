@@ -34,9 +34,9 @@ mapKey('<C-l>', '<C-w>l')
 
 
 -- normal 모드에서 창 크기 조절
-mapKey('<C-Up>',    ':resize -1<CR>')
-mapKey('<C-Down>',  ':resize +1<CR>')
-mapKey('<C-Left>',  ':vertical resize -2<CR>')
+mapKey('<C-Up>', ':resize -1<CR>')
+mapKey('<C-Down>', ':resize +1<CR>')
+mapKey('<C-Left>', ':vertical resize -2<CR>')
 mapKey('<C-Right>', ':vertical resize +2<CR>')
 
 
@@ -144,7 +144,7 @@ mapKey('ghR', require('gitsigns').reset_buffer)
 -- normal 모드에서 파일 변경점 확인하기
 mapKey('ghd', require('gitsigns').diffthis)
 -- normal 모드에서 코드 변경자 확인하기
-mapKey('ghb', function() require('gitsigns').blame_line{full=true} end)
+mapKey('ghb', function() require('gitsigns').blame_line { full = true } end)
 
 
 -- [Plugin] nvim-lspconfig
@@ -162,7 +162,7 @@ mapKey('<leader>ac', vim.lsp.buf.code_action)
 
 -- [Plugin] nvim-dap
 -- normal 모드에서 dap ui 열고 닫기
-mapKey('<leader>du', function() require("dapui").toggle({ }) end)
+mapKey('<leader>du', function() require("dapui").toggle({}) end)
 -- normal 모드에서 toggle breakpoint (with condition 지정)
 mapKey('<leader>dB', function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end)
 -- normal 모드에서 toggle breakpoint
@@ -192,10 +192,12 @@ mapKey('<leader>dt', function() require("dap").terminate() end)
 
 
 -- [Plugin] nvim-java
--- normal 모드에서 run main (toggle 열려있어야 실행됨)
-mapKey('<leader>kr', function() require('java').runner.built_in.run_app({}) end)
--- normal 모드에서 run terminal toggle
-mapKey('<leader>ko', function() require('java').runner.built_in.toggle_logs() end)
+-- normal 모드에서 runner terminal toggle & run main (toggle 열려있어야 실행됨)
+mapKey('<leader>kr',
+	function()
+		require('java').runner.built_in.toggle_logs()
+		require('java').runner.built_in.run_app({})
+	end)
 
 
 -- maven pom.xml dependency & lsp 자동 업데이트
@@ -207,18 +209,19 @@ local function UpdatePomFileDependenciesAndLspServer()
 		vim.cmd("silent !rm -r ~/.m2")
 		-- async
 		vim.loop.spawn("mvn", {
-			args = {"-f", current_file_full_path, "dependency:purge-local-repository", "dependency:resolve"}
-			}, function()
-				vim.schedule(function()
-					vim.cmd(":LspRestart")
-					vim.notify("Update pom.xml is Done!", vim.log.levels.INFO, { title = "maven" })
-					-- restart nvim-java plugin
-					require("java").setup()
-					require("lspconfig").jdtls.setup({})
-				end)
+			args = { "-f", current_file_full_path, "dependency:purge-local-repository", "dependency:resolve" }
+		}, function()
+			vim.schedule(function()
+				vim.cmd(":LspRestart")
+				vim.notify("Update pom.xml is Done!", vim.log.levels.INFO, { title = "maven" })
+				-- restart nvim-java plugin
+				require("java").setup()
+				require("lspconfig").jdtls.setup({})
+			end)
 		end)
 	else
-		vim.notify("Your file is not pom.xml.\n(Current file : " .. current_file .. ")", vim.log.levels.WARN, { title = "maven" })
+		vim.notify("Your file is not pom.xml.\n(Current file : " .. current_file .. ")", vim.log.levels.WARN,
+			{ title = "maven" })
 	end
 end
 mapKey('<leader>//', function() UpdatePomFileDependenciesAndLspServer() end)
