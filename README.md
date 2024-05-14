@@ -8,7 +8,7 @@ My Personal Integrated Development Environment (for java)
 
 ## Prerequisites
 
-* Ubuntu 20.04 or higher
+* Ubuntu 20.04 or higher (64-bit x86)
 * RAM 2GB (minimum 1GB)
 * Make sure `~/.config/nvim` is empty.
 
