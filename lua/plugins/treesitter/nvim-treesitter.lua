@@ -3,12 +3,12 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	config = function ()
+	config = function()
 		local configs = require("nvim-treesitter.configs")
 
 		configs.setup({
 			-- 필요한 언어 작성 (lsp directory에 추가된 언어 맞추어 설치)
-			ensure_installed = { "lua", "java" },
+			ensure_installed = { "lua", "java", "xml" },
 			sync_install = false,
 			highlight = { enable = true },
 			indent = { enable = true },

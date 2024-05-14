@@ -1,0 +1,28 @@
+-- for java
+return {
+	"nvim-java/nvim-java",
+	dependencies = {
+		"nvim-java/lua-async-await",
+		"nvim-java/nvim-java-core",
+		"nvim-java/nvim-java-test",
+		"nvim-java/nvim-java-dap",
+		"nvim-java/nvim-java-refactor",
+		"MunifTanjim/nui.nvim",
+		"neovim/nvim-lspconfig",
+		"mfussenegger/nvim-dap",
+		{
+			"williamboman/mason.nvim",
+			opts = {
+				registries = {
+					"github:nvim-java/mason-registry",
+					"github:mason-org/mason-registry",
+				},
+			},
+		},
+	},
+	config = function()
+		require('java').setup()
+		-- jdtls 세팅은 lsp/lspconfig.lua 에서 진행
+		-- require('lspconfig').jdtls.setup({})
+	end
+}

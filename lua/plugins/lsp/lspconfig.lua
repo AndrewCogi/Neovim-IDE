@@ -1,11 +1,12 @@
--- for lua
+-- for [mason & nvim] lspconfig
 return {
 	-- mason-lspconfig
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require('mason-lspconfig').setup({
-				ensure_installed = { "lua_ls" }
+				-- java, lua, xml
+				ensure_installed = { "jdtls", "lua_ls", "lemminx" }
 			})
 		end
 	},
@@ -14,7 +15,12 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require('lspconfig')
+			-- java
+			lspconfig.jdtls.setup({})
+			-- lua
 			lspconfig.lua_ls.setup({})
+			-- xml
+			lspconfig.lemminx.setup({})
 		end
 	},
 }
