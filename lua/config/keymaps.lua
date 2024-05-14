@@ -158,6 +158,8 @@ mapKey('gi', vim.lsp.buf.implementation)
 mapKey('gr', vim.lsp.buf.references)
 -- code action
 mapKey('<leader>ac', vim.lsp.buf.code_action)
+-- rename
+mapKey('rn', vim.lsp.buf.rename)
 
 
 -- [Plugin] nvim-dap
