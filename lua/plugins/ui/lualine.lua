@@ -82,10 +82,10 @@ ins_left {
 	color = function()
 		-- auto change color according to neovims mode
 		local mode_color = {
-			n = colors.blue,    -- normal
-			i = colors.green,   -- insert
-			v = colors.magenta,  -- visual
-			V = colors.magenta,  -- visual
+			n = colors.blue, -- normal
+			i = colors.green, -- insert
+			v = colors.magenta, -- visual
+			V = colors.magenta, -- visual
 			c = colors.violet, -- command
 		}
 		return { fg = mode_color[vim.fn.mode()] }
@@ -101,10 +101,10 @@ ins_left {
 	color = function()
 		-- auto change color according to neovims mode
 		local mode_color = {
-			n = colors.blue,    -- normal
-			i = colors.green,   -- insert
-			v = colors.magenta,  -- visual
-			V = colors.magenta,  -- visual
+			n = colors.blue, -- normal
+			i = colors.green, -- insert
+			v = colors.magenta, -- visual
+			V = colors.magenta, -- visual
 			c = colors.violet, -- command
 		}
 		return { fg = mode_color[vim.fn.mode()] }
@@ -126,10 +126,10 @@ ins_left {
 	color = function()
 		-- auto change color according to neovims mode
 		local mode_color = {
-			n = colors.blue,    -- normal
-			i = colors.green,   -- insert
-			v = colors.magenta,  -- visual
-			V = colors.magenta,  -- visual
+			n = colors.blue, -- normal
+			i = colors.green, -- insert
+			v = colors.magenta, -- visual
+			V = colors.magenta, -- visual
 			c = colors.violet, -- command
 		}
 		return { fg = mode_color[vim.fn.mode()], gui = 'bold' }
@@ -184,17 +184,17 @@ ins_left {
 
 -- Add components to right sections
 ins_right {
-	'o:encoding', -- option component same as &encoding in viml
+	'o:encoding',    -- option component same as &encoding in viml
 	fmt = string.upper, -- I'm not sure why it's upper case either ;)
 	cond = conditions.hide_in_width,
 	-- color = { fg = colors.green, gui = 'bold' },
 	color = function()
 		-- auto change color according to neovims mode
 		local mode_color = {
-			n = colors.blue,    -- normal
-			i = colors.green,   -- insert
-			v = colors.magenta,  -- visual
-			V = colors.magenta,  -- visual
+			n = colors.blue, -- normal
+			i = colors.green, -- insert
+			v = colors.magenta, -- visual
+			V = colors.magenta, -- visual
 			c = colors.violet, -- command
 		}
 		return { fg = mode_color[vim.fn.mode()] }
@@ -210,10 +210,10 @@ ins_right {
 	color = function()
 		-- auto change color according to neovims mode
 		local mode_color = {
-			n = colors.blue,    -- normal
-			i = colors.green,   -- insert
-			v = colors.magenta,  -- visual
-			V = colors.magenta,  -- visual
+			n = colors.blue, -- normal
+			i = colors.green, -- insert
+			v = colors.magenta, -- visual
+			V = colors.magenta, -- visual
 			c = colors.violet, -- command
 		}
 		return { fg = mode_color[vim.fn.mode()] }
@@ -228,10 +228,10 @@ ins_right {
 	color = function()
 		-- auto change color according to neovims mode
 		local mode_color = {
-			n = colors.blue,    -- normal
-			i = colors.green,   -- insert
-			v = colors.magenta,  -- visual
-			V = colors.magenta,  -- visual
+			n = colors.blue, -- normal
+			i = colors.green, -- insert
+			v = colors.magenta, -- visual
+			V = colors.magenta, -- visual
 			c = colors.violet, -- command
 		}
 		return { fg = mode_color[vim.fn.mode()], gui = 'bold' }
@@ -257,10 +257,10 @@ ins_right {
 	color = function()
 		-- auto change color according to neovims mode
 		local mode_color = {
-			n = colors.blue,    -- normal
-			i = colors.green,   -- insert
-			v = colors.magenta,  -- visual
-			V = colors.magenta,  -- visual
+			n = colors.blue, -- normal
+			i = colors.green, -- insert
+			v = colors.magenta, -- visual
+			V = colors.magenta, -- visual
 			c = colors.violet, -- command
 		}
 		return { fg = mode_color[vim.fn.mode()] }
