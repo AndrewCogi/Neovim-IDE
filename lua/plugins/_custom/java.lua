@@ -22,7 +22,6 @@ return {
 	},
 	config = function()
 		require('java').setup()
-		-- jdtls 세팅은 lsp/lspconfig.lua 에서 진행
-		-- require('lspconfig').jdtls.setup({})
+		require('lspconfig').jdtls.setup({})
 	end
 }
