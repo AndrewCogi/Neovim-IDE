@@ -222,7 +222,7 @@ local function UpdatePomFileDependenciesAndLspServer()
 			end)
 		end)
 	else
-		vim.notify("Your file is not pom.xml.\n(Current file : " .. current_file .. ")", vim.log.levels.WARN,
+		vim.notify("Current file is not pom.xml.\n(Current file : " .. current_file .. ")", vim.log.levels.WARN,
 			{ title = "maven" })
 	end
 end
