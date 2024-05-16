@@ -39,3 +39,6 @@ require("lazy").setup({
 
 -- keymaps 설정 적용
 require("config.keymaps")
+
+-- autocmds 설정 적용
+require("utils.autocmds")

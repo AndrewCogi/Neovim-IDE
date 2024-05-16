@@ -198,29 +198,9 @@ mapKey('<leader>dt', function() require("dap").terminate() end)
 mapKey('<leader>kr', function() require('java').runner.built_in.run_app({}) end)
 mapKey('<leader>ko', function() require('java').runner.built_in.toggle_logs() end)
 
-
--- maven pom.xml dependency & lsp 자동 업데이트
-local function UpdatePomFileDependenciesAndLspServer()
-	local current_file = vim.fn.expand('%:t')
-	local current_file_full_path = vim.fn.expand('%:p')
-	if current_file == "pom.xml" then
-		vim.notify("Update pom.xml...", vim.log.levels.INFO, { title = "maven" })
-		vim.cmd("silent !rm -r ~/.m2")
-		-- async
-		vim.loop.spawn("mvn", {
-			args = { "-f", current_file_full_path, "dependency:purge-local-repository", "dependency:resolve" }
-		}, function()
-			vim.schedule(function()
-				vim.cmd(":LspRestart")
-				vim.notify("Update pom.xml is Done!", vim.log.levels.INFO, { title = "maven" })
-				-- restart nvim-java plugin
-				require("java").setup()
-				require("lspconfig").jdtls.setup({})
-			end)
-		end)
-	else
-		vim.notify("Current file is not pom.xml.\n(Current file : " .. current_file .. ")", vim.log.levels.WARN,
-			{ title = "maven" })
-	end
-end
-mapKey('<leader>//', function() UpdatePomFileDependenciesAndLspServer() end)
+-- normal 모드에서 project refresh
+mapKey('<leader>//', function()
+	vim.notify("Refreshing project...", vim.log.levels.INFO, { title = "maven" })
+	require("java").setup()
+	require("lspconfig").jdtls.setup({})
+end)
