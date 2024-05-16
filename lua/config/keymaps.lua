@@ -194,12 +194,9 @@ mapKey('<leader>dt', function() require("dap").terminate() end)
 
 
 -- [Plugin] nvim-java
--- normal 모드에서 runner terminal toggle & run main (toggle 열려있어야 실행됨)
---[[ mapKey('<leader>kr',
-	function()
-		require('java').runner.built_in.toggle_logs()
-		require('java').runner.built_in.run_app({})
-	end) ]]
+-- normal 모드에서 runner terminal toggle & run main (toggle 열려있어야 실행됨을 확인할 수 있음. 자동으로 열리지 않음)
+mapKey('<leader>kr', function() require('java').runner.built_in.run_app({}) end)
+mapKey('<leader>ko', function() require('java').runner.built_in.toggle_logs() end)
 
 
 -- maven pom.xml dependency & lsp 자동 업데이트
