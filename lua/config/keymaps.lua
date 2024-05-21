@@ -13,6 +13,8 @@ mapKey('<leader>bn', ':bnext<CR>')
 mapKey('<leader>bp', ':bprevious<CR>')
 -- [Plugin] vim-bbye : explorer 유지하며 버퍼 닫기
 mapKey('<leader>bd', ':Bdelete<CR>')
+-- [Plugin] bufferline.nvim : 현재 버퍼 제외 모두 닫기
+mapKey('<leader>ba', ':BufferLineCloseOthers<CR>')
 
 
 -- visual 모드에서 해당 라인 상/하 이동
