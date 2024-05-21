@@ -36,8 +36,8 @@ opt.scrolloff = 8             -- 수직이동 여백 8칸 설정
 opt.sidescrolloff = 8         -- 수평이동 여백 8칸 설정
 opt.termguicolors = true      -- 256 이상 색상 활성화
 
--- <C-v> 텍스트 입력으로 처리 (붙여넣기로 사용하기 위함)
-vim.o.termkey = '<C-V>'
+-- <C-v> 텍스트 입력으로 처리 (붙여넣기로 사용하기 위함) (Deprecated in Neovim 0.10)
+-- vim.o.termkey = '<C-V>'
 
 -- 파일 열기 마지막 부분 저장
 vim.cmd([[
