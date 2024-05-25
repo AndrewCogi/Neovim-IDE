@@ -10,6 +10,7 @@ return {
 		"MunifTanjim/nui.nvim",
 		"neovim/nvim-lspconfig",
 		"mfussenegger/nvim-dap",
+		"mfussenegger/nvim-jdtls", -- add for refresh jdtls (JdtWipeDataAndRestart)
 		{
 			"williamboman/mason.nvim",
 			opts = {

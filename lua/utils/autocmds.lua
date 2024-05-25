@@ -18,13 +18,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 -- 파일 변경 확인 및 저장 시, Refresh 자동 진행
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	pattern = { "*.xml" },
-	desc = "The XML file has been modified. Refreshing the project...",
+	desc = "The XML file has been modified. Trying to refresh the maven project...",
 	callback = function()
 		if was_modified then
-			vim.notify("The XML file has been modified. Refreshing the project...", vim.log.levels.INFO,
+			vim.notify("The XML file has been modified. Trying to refresh the maven project...", vim.log.levels.INFO,
 				{ title = "maven" })
+			require("jdtls.setup").wipe_data_and_restart()
 			require("java").setup()
-			require("lspconfig").jdtls.setup({})
 		end
 	end,
 	group = autocmd_group,

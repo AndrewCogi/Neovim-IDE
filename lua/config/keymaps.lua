@@ -202,7 +202,7 @@ mapKey('<leader>ko', function() require('java').runner.built_in.toggle_logs() en
 
 -- normal 모드에서 project refresh
 mapKey('<leader>//', function()
-	vim.notify("Refreshing project...", vim.log.levels.INFO, { title = "maven" })
+	vim.notify("Trying to refresh the maven project...", vim.log.levels.INFO, { title = "maven" })
+	require("jdtls.setup").wipe_data_and_restart()
 	require("java").setup()
-	require("lspconfig").jdtls.setup({})
 end)
