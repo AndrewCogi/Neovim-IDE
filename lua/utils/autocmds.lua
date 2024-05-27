@@ -23,8 +23,8 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 		if was_modified then
 			vim.notify("The XML file has been modified. Trying to refresh the maven project...", vim.log.levels.INFO,
 				{ title = "maven" })
-			require("jdtls.setup").wipe_data_and_restart()
-			require("java").setup()
+			require('java').setup()
+			require('lspconfig').jdtls.setup({})
 		end
 	end,
 	group = autocmd_group,
