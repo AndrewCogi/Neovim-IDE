@@ -5,8 +5,8 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require('mason-lspconfig').setup({
-				-- java, lua, xml
-				ensure_installed = { "jdtls", "lua_ls", "lemminx" }
+				-- lua, xml
+				ensure_installed = { "lua_ls", "lemminx" }
 			})
 		end
 	},
@@ -36,9 +36,9 @@ return {
 			end
 
 			-- lua
-			lspconfig.lua_ls.setup({})
+			lspconfig.lua_ls.setup({ on_attach = on_attach })
 			-- xml
-			lspconfig.lemminx.setup({})
+			lspconfig.lemminx.setup({ on_attach = on_attach })
 		end
 	},
 }
