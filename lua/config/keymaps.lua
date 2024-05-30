@@ -200,9 +200,11 @@ mapKey('<leader>dt', function() require("dap").terminate() end)
 mapKey('<leader>kr', function() require('java').runner.built_in.run_app({}) end)
 mapKey('<leader>ko', function() require('java').runner.built_in.toggle_logs() end)
 
--- normal 모드에서 project refresh
-mapKey('<leader>//', function()
-	vim.notify("Trying to refresh the maven project...", vim.log.levels.INFO, { title = "maven" })
-	require("java").setup()
-	require('lspconfig').jdtls.setup({})
+-- [Java] 관련
+-- normal 모드에서  synchronize pom
+mapKey('<leader>//', function() require('utils.maven-utils').synchronize_pom() end)
+-- normal 모드에서 Lsp Restart
+mapKey('<leader>lr', function()
+	vim.notify("Restarting Lsp...")
+	vim.cmd('LspRestart')
 end)
