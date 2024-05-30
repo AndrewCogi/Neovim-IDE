@@ -19,6 +19,14 @@ return {
 				},
 			},
 		},
+		-- for java code action
+		{
+			'AndrewCogi/jc.nvim',
+			'mfussenegger/nvim-jdtls',
+			config = function()
+				require('jc').setup()
+			end
+		}
 	},
 	config = function()
 		require('java').setup()
