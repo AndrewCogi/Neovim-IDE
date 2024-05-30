@@ -12,9 +12,7 @@ mapKey('<S-TAB>', ':bprevious<CR>')
 mapKey('<leader>bn', ':bnext<CR>')
 mapKey('<leader>bp', ':bprevious<CR>')
 -- [Plugin] vim-bbye : explorer 유지하며 버퍼 닫기
-mapKey('<leader>bd', ':Bdelete<CR>')
--- [Plugin] bufferline.nvim : 현재 버퍼 제외 모두 닫기
-mapKey('<leader>ba', ':BufferLineCloseOthers<CR>')
+mapKey('<leader>bd', ':Bwipeout<CR>')
 
 
 -- visual 모드에서 해당 라인 상/하 이동
@@ -165,14 +163,16 @@ mapKey('rn', vim.lsp.buf.rename)
 
 
 -- [Plugin] nvim-dap
+-- normal 모드에서 DapInit (:JavaDapConfig)
+mapKey('<leader>dc', ':JavaDapConfig<CR>')
 -- normal 모드에서 dap ui 열고 닫기
 mapKey('<leader>du', function() require("dapui").toggle({}) end)
 -- normal 모드에서 toggle breakpoint (with condition 지정)
 mapKey('<leader>dB', function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end)
 -- normal 모드에서 toggle breakpoint
 mapKey('<leader>db', function() require("dap").toggle_breakpoint() end)
--- normal 모드에서 continue
-mapKey('<leader>dc', function() require("dap").continue() end)
+-- normal 모드에서 continue (run debug)
+mapKey('<leader>dr', function() require("dap").continue() end)
 -- normal 모드에서 run with args
 mapKey('<leader>da', function() require("dap").continue({ before = get_args }) end)
 -- normal 모드에서 run to cursor
@@ -187,8 +187,6 @@ mapKey('<leader>do', function() require("dap").step_over() end)
 mapKey('<leader>dO', function() require("dap").step_out() end)
 -- normal 모드에서 pause
 mapKey('<leader>dp', function() require("dap").pause() end)
--- normal 모드에서 toggle repl
-mapKey('<leader>dr', function() require("dap").repl.toggle() end)
 -- normal 모드에서 session
 mapKey('<leader>ds', function() require("dap").session() end)
 -- normal 모드에서 session
