@@ -208,6 +208,11 @@ mapKey('<leader>dt', function() require("dap").terminate() end)
 mapKey('<leader>kr', function() require('java').runner.built_in.run_app({}) end)
 mapKey('<leader>ko', function() require('java').runner.built_in.toggle_logs() end)
 
+
+-- [Plugin] springtime
+-- normal 모드에서 Spring initializr 실행
+mapKey('<leader>ii', ':Springtime<CR>')
+
 -- [Java] 관련
 -- normal 모드에서  synchronize pom
 mapKey('<leader>//', function() require('utils.maven-utils').synchronize_pom() end)
