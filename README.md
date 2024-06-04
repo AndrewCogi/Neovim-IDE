@@ -20,8 +20,8 @@ My Personal Integrated Development Environment (for java)
 source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/Installer_DalMuDee_v2.sh)
 ```
 
-**Install Java17 & Springboot3 in ONE command**
+**Install Java17 & Maven & Gradle in ONE command**
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/Installer_Java17_Springboot3.sh)
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/Installer_Maven_Gradle.sh)
 ```
