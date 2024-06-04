@@ -162,6 +162,16 @@ mapKey('<leader>ac', vim.lsp.buf.code_action)
 mapKey('rn', vim.lsp.buf.rename)
 
 
+-- [Plugin] luasnip
+-- normal 모드에서 snippet 1 칸 앞으로
+-- mapKey('<C-m>', function() require('luasnip').jump(1) end)
+mapKey('<C-l>', function() require('luasnip').jump(1) end, "i")
+mapKey('<C-l>', function() require('luasnip').jump(1) end, "v")
+-- normal 모드에서 snippet 1 칸 뒤로
+mapKey('<C-h>', function() require('luasnip').jump(-1) end, "i")
+mapKey('<C-h>', function() require('luasnip').jump(-1) end, "v")
+
+
 -- [Plugin] nvim-dap
 -- normal 모드에서 DapInit (:JavaDapConfig)
 mapKey('<leader>dc', ':JavaDapConfig<CR>')

@@ -36,8 +36,8 @@ return {
 				mapping = cmp.mapping.preset.insert({
 					["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
 					["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-					["<C-j>"] = cmp.mapping.scroll_docs(-4),
-					["<C-k>"] = cmp.mapping.scroll_docs(4),
+					["<C-j>"] = cmp.mapping.scroll_docs(4),
+					["<C-k>"] = cmp.mapping.scroll_docs(-4),
 					["<C-e>"] = cmp.mapping.abort(),
 					["<Tab>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
@@ -51,10 +51,11 @@ return {
 					end,
 				}),
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-					{ name = "path" },
+					{ name = "luasnip",  priority = 1, max_item_count = 3 },
+					{ name = "nvim_lsp", priority = 2 },
+					{ name = "path",     priority = 3, max_item_count = 3 },
 				}, {
-					{ name = "buffer" },
+					{ name = "buffer", priority = 4, max_item_count = 3 },
 				}),
 				formatting = {
 					format = function(_, item)
