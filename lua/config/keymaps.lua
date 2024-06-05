@@ -211,7 +211,7 @@ mapKey('<leader>ko', function() require('java').runner.built_in.toggle_logs() en
 
 -- [Java] 관련
 -- normal 모드에서  synchronize pom
-mapKey('<leader>//', function() require('utils.maven-utils').synchronize_pom() end)
+mapKey('<leader>//', function() require('utils.java-utils').synchronize_project() end)
 -- normal 모드에서 Lsp Restart
 mapKey('<leader>lr', function()
 	vim.notify("Restarting Lsp...")
