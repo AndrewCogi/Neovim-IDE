@@ -23,5 +23,5 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 **Install Java17 & Maven & Gradle in ONE command**
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/Installer_Maven_Gradle.sh)
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/Installer_Java17_Maven_Gradle.sh)
 ```
