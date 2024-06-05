@@ -50,7 +50,7 @@ return {
 			generate_keymap = "<Enter>",
 
 			-- If you want confirmation before generate the Spring project
-			confirmation = true,
+			confirmation = false,
 
 			-- Highlight links to Title and sections for changing colors
 			style = {
@@ -70,7 +70,7 @@ return {
 
 			-- If after generation you want to open the folder
 			-- Opens the generated project in Neovim by default
-			open_auto = true
+			open_auto = false
 		},
 
 		-- This could be enabled for debugging purposes
