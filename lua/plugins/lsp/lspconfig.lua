@@ -5,8 +5,8 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require('mason-lspconfig').setup({
-				-- lua, xml
-				ensure_installed = { "lua_ls", "lemminx" }
+				-- lua, xml, gradle
+				ensure_installed = { "lua_ls", "lemminx", "gradle_ls" }
 			})
 		end
 	},
@@ -39,6 +39,8 @@ return {
 			lspconfig.lua_ls.setup({ on_attach = on_attach })
 			-- xml
 			lspconfig.lemminx.setup({ on_attach = on_attach })
+			-- gradle
+			lspconfig.gradle_ls.setup({ on_attach = on_attach })
 		end
 	},
 }
