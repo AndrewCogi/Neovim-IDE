@@ -7,8 +7,6 @@ local Job = require("plenary.job")
 local is_running = false
 local error_occured = false
 local function synchronize_exec_dir(debug)
-	vim.notify("is_running : " .. tostring(is_running))
-	vim.notify("error_occured : " .. tostring(error_occured))
 	if is_running then
 		vim.notify("[synchronize_exec_dir()] is already in progress.", vim.log.levels.WARN)
 		return
