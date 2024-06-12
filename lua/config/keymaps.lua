@@ -147,7 +147,7 @@ mapKey("gr", vim.lsp.buf.references)
 -- code action
 mapKey("<leader>ac", vim.lsp.buf.code_action)
 -- rename
-mapKey("rn", vim.lsp.buf.rename)
+mapKey("<leader>rn", vim.lsp.buf.rename)
 
 -- [Plugin] luasnip
 -- normal 모드에서 snippet 1 칸 앞으로
@@ -237,7 +237,8 @@ mapKey("<leader>//", function()
 	require("utils.java.synchronize_config").synchronize_config()
 end)
 
--- normal 모드에서 root pwd가 maven/gradle project일 때, diagnostics 확인 함수. [Plugin] diaglist.nvim 필요
+-- normal 모드에서 root pwd가 maven/gradle project일 때, project 단위 diagnostics 최신화
+-- Neotree에서 확인 가능
 mapKey("<leader>cc", function()
 	require("utils.java.synchronize_diagnostics_java").synchronize_diagnostics_java()
 end)

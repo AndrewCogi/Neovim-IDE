@@ -80,10 +80,7 @@ local function synchronize_diagnostics_java()
 
 	collect_diagnostics(root, function(diagnostics)
 		set_diagnostics_in_qflist(diagnostics)
-		vim.notify("Diagnostic synchronization complete.")
-		-- open diaglist
-		require("diaglist").open_all_diagnostics()
-		vim.cmd("set nobuflisted")
+		vim.notify("Diagnostic synchronization complete.\nPlease check the diagnostic results in Neotree.")
 	end)
 end
 
