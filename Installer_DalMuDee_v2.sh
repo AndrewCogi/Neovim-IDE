@@ -15,7 +15,7 @@ install_neovim() { \
 }
 
 install_prerequisite() { \
-	sudo apt install make zip gcc ripgrep jq -y
+	sudo apt install make zip gcc ripgrep jq nodejs npm -y
 }
 
 install_DalMuDee_v2_config() { \
