@@ -4,17 +4,17 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
-			require('mason-lspconfig').setup({
-				-- lua, xml, gradle
-				ensure_installed = { "lua_ls", "lemminx", "gradle_ls" }
+			require("mason-lspconfig").setup({
+				-- lua, xml, gradle, html, yaml(yml)
+				ensure_installed = { "lua_ls", "lemminx", "gradle_ls", "html", "yamlls" },
 			})
-		end
+		end,
 	},
 	-- nvim-lspconfig
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require('lspconfig')
+			local lspconfig = require("lspconfig")
 			-- Bwipeout 실시할 때, lsp buffer 연결도 끊도록 설정 (:LspInfo 참고)
 			local function buffer_augroup(group, bufnr, cmds)
 				vim.api.nvim_create_augroup(group, { clear = false })
@@ -41,6 +41,33 @@ return {
 			lspconfig.lemminx.setup({ on_attach = on_attach })
 			-- gradle
 			lspconfig.gradle_ls.setup({ on_attach = on_attach })
-		end
+			-- html
+			lspconfig.html.setup({ on_attach = on_attach })
+			-- yaml(yml)
+			lspconfig.yamlls.setup({
+				on_attach = on_attach,
+				settings = {
+					yaml = {
+						schemas = {
+							["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+							["https://json.schemastore.org/github-action.json"] = "/.github/action.{yml,yaml}",
+							["https://json.schemastore.org/ansible-stable-2.9.json"] = "/playbooks/**/*.yml",
+							["http://json.schemastore.org/composer"] = "/composer.json",
+							["http://json.schemastore.org/ansible"] = "/roles/**/*.yml",
+							["http://json.schemastore.org/kustomization"] = "kustomization.yaml",
+							["http://json.schemastore.org/kubeval"] = "helmfile.yaml",
+							["https://json.schemastore.org/chart"] = "/Chart.yaml",
+							["https://json.schemastore.org/k8sschemas"] = "k8s",
+							["https://json.schemastore.org/prometheus-rule"] = "/prometheus/*.yml"
+						},
+						validate = true,
+						completion = true,
+						format = {
+							enable = true,
+						}
+					}
+				}
+			})
+		end,
 	},
 }
