@@ -230,6 +230,18 @@ end)
 mapKey("<leader>ko", function()
 	require("java").runner.built_in.toggle_logs()
 end)
+-- normal 모드에서 test current class
+mapKey("<leader>kt", function()
+	require("java").test.debug_current_class()
+end)
+-- normal 모드에서 test current method
+mapKey("<leader>km", function()
+	require("java").test.debug_current_method()
+end)
+-- normal 모드에서 show last test report
+mapKey("<leader>ks", function()
+	require("java").test.view_last_report()
+end)
 
 -- [Java] custom
 -- normal 모드에서  synchronize pom.xml or build.gradle
