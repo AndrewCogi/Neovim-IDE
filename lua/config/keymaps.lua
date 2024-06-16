@@ -217,7 +217,7 @@ end)
 mapKey("<leader>ds", function()
 	require("dap").session()
 end)
--- normal 모드에서 session
+-- normal 모드에서 terminate
 mapKey("<leader>dt", function()
 	require("dap").terminate()
 end)
