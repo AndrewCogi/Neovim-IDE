@@ -183,7 +183,7 @@ mapKey("<leader>db", function()
 end)
 -- normal 모드에서 continue (run debug)
 mapKey("<leader>dr", function()
-	require("utils.java.synchronize_exec_dir").synchronize_exec_dir(true)
+	require("utils.java.synchronize_exec_dir_and_run").synchronize_exec_dir_and_run(true)
 end)
 -- normal 모드에서 run with args
 mapKey("<leader>da", function()
