@@ -40,11 +40,13 @@ return {
 						elements = {
 							{
 								id = "console",
-								size = 0.7
+								-- size = 0.7
+								size = 1.0
 							},
 							{
 								id = "repl",
-								size = 0.3
+								-- size = 0.3
+								size = 0.0
 							}
 						},
 						position = "bottom",
