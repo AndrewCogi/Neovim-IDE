@@ -225,18 +225,18 @@ end)
 -- [Plugin] nvim-java
 -- normal 모드에서 runner terminal toggle & run main (toggle 열려있어야 실행됨을 확인할 수 있음. 자동으로 열리지 않음)
 mapKey("<leader>kr", function()
-	require("utils.java.synchronize_exec_dir").synchronize_exec_dir(false)
+	require("utils.java.synchronize_exec_dir_and_run").synchronize_exec_dir_and_run(false)
 end)
 mapKey("<leader>ko", function()
 	require("java").runner.built_in.toggle_logs()
 end)
 -- normal 모드에서 test current class
 mapKey("<leader>kt", function()
-	require("java").test.debug_current_class()
+	require("utils.java.synchronize_exec_dir_and_test").synchronize_exec_dir_and_test(true)
 end)
 -- normal 모드에서 test current method
 mapKey("<leader>km", function()
-	require("java").test.debug_current_method()
+	require("utils.java.synchronize_exec_dir_and_test").synchronize_exec_dir_and_test(false)
 end)
 -- normal 모드에서 show last test report
 mapKey("<leader>ks", function()

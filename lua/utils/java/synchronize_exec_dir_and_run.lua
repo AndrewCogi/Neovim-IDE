@@ -6,7 +6,7 @@ local Job = require("plenary.job")
 
 local is_running = false
 local error_occured = false
-local function synchronize_exec_dir(debug)
+local function synchronize_exec_dir_and_run(debug)
 	if is_running then
 		vim.notify("[synchronize_exec_dir()] is already in progress.", vim.log.levels.WARN)
 		return
@@ -37,7 +37,7 @@ local function synchronize_exec_dir(debug)
 				on_exit = function(j, return_val)
 					if return_val == 0 then
 						vim.schedule(function()
-							vim.notify("[target directory] synchronization successful.\nExecuting project...")
+							vim.notify("[target directory] synchronization successful.\nExecuting project (run)...")
 							if debug then
 								require("dap").continue()
 							else
@@ -71,7 +71,7 @@ local function synchronize_exec_dir(debug)
 			})
 			:start()
 
-	-- [[ gradle ]]
+		-- [[ gradle ]]
 	elseif file_exists(gradle_file) then
 		Job
 			:new({
@@ -91,9 +91,9 @@ local function synchronize_exec_dir(debug)
 									args = {
 										"-c",
 										[[
-              					mkdir -p bin/main && 
-              					cp -r build/classes/java/main/* bin/main/ && 
-              					cp -r build/resources/main/* bin/main/ && 
+              					mkdir -p bin/main &&
+              					cp -r build/classes/java/main/* bin/main/ &&
+              					cp -r build/resources/main/* bin/main/ &&
               					mkdir -p bin/test
             				]],
 									},
@@ -102,7 +102,7 @@ local function synchronize_exec_dir(debug)
 										if return_val2 == 0 then
 											vim.schedule(function()
 												vim.notify(
-													"[bin directory] synchronization successful.\nExecuting project..."
+													"[bin directory] synchronization successful.\nExecuting project (run)..."
 												)
 												if debug then
 													require("dap").continue()
@@ -160,7 +160,7 @@ local function synchronize_exec_dir(debug)
 			})
 			:start()
 
-	-- [[ nothing ]]
+		-- [[ nothing ]]
 	else
 		vim.notify("No [pom.xml] or [build.gradle] found in the current directory.", vim.log.levels.ERROR)
 		is_running = false
@@ -169,5 +169,5 @@ local function synchronize_exec_dir(debug)
 end
 
 return {
-	synchronize_exec_dir = synchronize_exec_dir,
+	synchronize_exec_dir_and_run = synchronize_exec_dir_and_run,
 }
