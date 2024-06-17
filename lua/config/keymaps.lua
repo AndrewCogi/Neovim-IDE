@@ -242,6 +242,10 @@ end)
 mapKey("<leader>ks", function()
 	require("java").test.view_last_report()
 end)
+-- normal 모드에서 extract variable
+mapKey("<leader>xv", function()
+	require("java").refactor.extract_variable()
+end)
 
 -- [Java] custom
 -- normal 모드에서  synchronize pom.xml or build.gradle
