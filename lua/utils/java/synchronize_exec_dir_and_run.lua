@@ -90,12 +90,12 @@ local function synchronize_exec_dir_and_run(debug)
 									command = "sh",
 									args = {
 										"-c",
-										[[
-              					mkdir -p bin/main &&
-              					cp -r build/classes/java/main/* bin/main/ &&
-              					cp -r build/resources/main/* bin/main/ &&
-              					mkdir -p bin/test
-            				]],
+										-- [1] : bin directory 삭제
+										"rm -rf bin && " ..
+										-- [2] : main contents 생성
+										"mkdir -p bin/main && " ..
+										"cp -r build/classes/java/main/* bin/main/ && " ..
+										"cp -r build/resources/main/* bin/main/"
 									},
 									on_start = function() end,
 									on_exit = function(j2, return_val2)

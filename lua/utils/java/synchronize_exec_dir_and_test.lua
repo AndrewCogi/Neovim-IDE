@@ -28,7 +28,7 @@ local function synchronize_exec_dir_and_test(is_class)
 		Job
 			:new({
 				command = "mvn",
-				args = { "clean", "compile", "process-resources", "process-classes" },
+				args = { "clean", "test-compile", "process-test-resources", "process-test-classes" },
 				on_start = function()
 					vim.schedule(function()
 						vim.notify("Starting [target directory] synchronization...")
@@ -76,7 +76,7 @@ local function synchronize_exec_dir_and_test(is_class)
 		Job
 			:new({
 				command = "gradle",
-				args = { "clean", "compileJava", "processResources", "classes" },
+				args = { "clean", "compileTestJava", "processTestResources", "testClasses" },
 				on_start = function()
 					vim.schedule(function()
 						vim.notify("Starting [bin directory] synchronization...")
@@ -90,19 +90,26 @@ local function synchronize_exec_dir_and_test(is_class)
 									command = "sh",
 									args = {
 										"-c",
-										[[
-              					mkdir -p bin/main &&
-              					cp -r build/classes/java/main/* bin/main/ &&
-              					cp -r build/resources/main/* bin/main/ &&
-              					mkdir -p bin/test
-            				]],
+										-- [1] : bin directory 삭제
+										"rm -rf bin && " ..
+										-- [2] : main contents 생성(test에 필요, gradle testXXX 실행 시에도 main이 먼저 만들어지는 이유임)
+										"mkdir -p bin/main && " ..
+										"cp -r build/classes/java/main/* bin/main/ && " ..
+										"cp -r build/resources/main/* bin/main/ && " ..
+										-- [3] : test contents 생성
+											-- build/resources/test/*를 bin/main/으로 옮기는 이유? : 현재 nvim-java가 test를 실행할 때, 
+											-- bin/test/에서 resources를 사용하지 않고 bin/main/에서 사용하기 때문
+										"mkdir -p bin/test && " ..
+										"mkdir -p bin/main && " ..
+										"cp -r build/classes/java/test/* bin/test/ && " ..
+										"cp -r build/resources/test/* bin/main/"
 									},
 									on_start = function() end,
 									on_exit = function(j2, return_val2)
 										if return_val2 == 0 then
 											vim.schedule(function()
 												vim.notify(
-													"[target directory] synchronization successful.\nExecuting project (test)...")
+													"[bin directory] synchronization successful.\nExecuting project (test)...")
 												if is_class then
 													require("java").test.debug_current_class()
 												else
