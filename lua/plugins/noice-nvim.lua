@@ -1,3 +1,4 @@
+-- better nvim-notify
 return {
 	"folke/noice.nvim",
 	event = "VeryLazy",

@@ -1,4 +1,4 @@
--- file explorer (파일 탐색기)
+-- file explorer
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	branch = "v3.x",
