@@ -55,11 +55,15 @@ return {
 				end,
 			}),
 			sources = cmp.config.sources({
-				{ name = "luasnip",  priority = 1, max_item_count = 3 },
+				{ name = "nvim_lsp" }, -- lsp
+				{ name = "luasnip" }, -- snippets
+				{ name = "buffer" }, -- text within current buffer
+				{ name = "path" }, -- file system paths
+				--[[ { name = "luasnip",  priority = 1, max_item_count = 3 },
 				{ name = "nvim_lsp", priority = 2, max_item_count = 5 },
 				{ name = "path",     priority = 3, max_item_count = 3 },
 			}, {
-				{ name = "buffer", priority = 4 },
+				{ name = "buffer", priority = 4 }, ]]
 			}),
 			formatting = {
 				format = function(_, item)
