@@ -22,14 +22,14 @@ return {
 		require('mason-lspconfig').setup({
 			-- Install these LSPs automatically
 			ensure_installed = {
-				'bashls',
-				'cssls',
-				'html',
-				'gradle_ls',
 				'lua_ls',
 				'jdtls',
-				'lemminx',
 				'yamlls',
+				'lemminx',
+				'gradle_ls',
+				-- 'bashls',-- require npm
+				-- 'cssls', -- require npm
+				-- 'html', -- require npm
 			}
 		})
 
