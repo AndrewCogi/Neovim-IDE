@@ -149,14 +149,7 @@ mapKey("<leader>gt", function()
 end)
 -- run project
 mapKey("<leader>kr", function()
-	local root_dir = require('jdtls.setup').find_root({ 'pom.xml', 'build.gradle' })
-	if root_dir ~= nil then
-		if vim.fn.filereadable(root_dir .. "/pom.xml") == 1 then
-			vim.cmd("split 13 | term cd " .. root_dir .. "&& mvn spring-boot:run")
-		elseif vim.fn.filereadable(root_dir .. "/build.gradle") == 1 then
-			vim.cmd("split 13 | term cd " .. root_dir .. "&& gradle bootRun --console=plain")
-		end
-	end
+	require("utils.java.project_runner_java").project_runner_java()
 end)
 -- test current class
 mapKey("<leader>kt", function()
