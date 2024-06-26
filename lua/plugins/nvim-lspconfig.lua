@@ -24,9 +24,9 @@ return {
 			ensure_installed = {
 				'lua_ls',
 				'jdtls',
-				'yamlls',
 				'lemminx',
 				'gradle_ls',
+				-- 'yamlls', -- require npm
 				-- 'bashls',-- require npm
 				-- 'cssls', -- require npm
 				-- 'html', -- require npm
