@@ -2,6 +2,10 @@
 local mapKey = require("utils.keyMapper").mapKey
 
 
+-- [Plugin] vim-bbye
+-- buffer delete
+mapKey("<leader>bd", ":Bdelete<CR>")
+
 -- [Plugin] nvim-osc52
 -- visual 모드에서 ctrl+c 클립보드 저장
 -- cmd+v로 붙여넣기 (ios)
