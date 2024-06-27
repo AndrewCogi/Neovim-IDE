@@ -20,7 +20,7 @@ require("basic.keymaps")
 -- 플러그인 세팅
 require("lazy").setup("plugins", {
 	change_detection = {
-		enabled = true,-- automatically check for config file changes and reload the ui
+		enabled = true, -- automatically check for config file changes and reload the ui
 		notify = false, -- turn off notifications whenever plugin changes are made
 	}
 })
