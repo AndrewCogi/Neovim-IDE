@@ -1,4 +1,4 @@
--- root_dir 판단 및 project tool 판단 후, 실행하는 함수
+-- root_dir 판단 및 project tool (maven/gradle)판단 후, run 실행하는 함수
 
 local function project_runner_java()
 	local root_dir = require('jdtls.setup').find_root({ 'pom.xml', 'build.gradle' })
