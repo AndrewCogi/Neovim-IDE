@@ -43,19 +43,19 @@ return {
 				elements = {
 					{
 						id = "scopes",
-						size = 0.50
+						size = 0.40
 					},
 					{
 						id = "stacks",
-						size = 0.30
+						size = 0.20
 					},
 					{
 						id = "watches",
-						size = 0.10
+						size = 0.20
 					},
 					{
 						id = "breakpoints",
-						size = 0.10
+						size = 0.20
 					}
 				},
 				size = 40,
@@ -63,10 +63,16 @@ return {
 			},
 			{
 				elements = {
-					"repl",
-					"console",
+					{
+						id = "repl",
+						size = 0.35
+					},
+					{
+						id = "console",
+						size = 0.65
+					},
 				},
-				size = 10,
+				size = 20,
 				position = "bottom", -- Can be "bottom" or "top"
 			}
 		},
