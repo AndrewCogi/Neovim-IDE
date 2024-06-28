@@ -158,13 +158,15 @@ end)
 -- test current class
 mapKey("<leader>kt", function()
 	if vim.bo.filetype == 'java' then
-		require("jdtls").test_class()
+		require("utils.java.project_tester_java").project_tester_java(true)
+		-- require("jdtls").test_class()
 	end
 end)
 -- test current method
 mapKey("<leader>km", function()
 	if vim.bo.filetype == 'java' then
-		require("jdtls").test_nearest_method()
+		require("utils.java.project_tester_java").project_tester_java(false)
+		-- require("jdtls").test_nearest_method()
 	end
 end)
 
@@ -233,3 +235,7 @@ end)
 mapKey("<leader>md", function()
 	require("noice").cmd("dismiss")
 end)
+
+
+-- [Plugin] vim-maximizer
+mapKey("<leader>mx", ":MaximizerToggle<CR>")
