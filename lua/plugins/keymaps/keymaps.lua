@@ -235,7 +235,3 @@ end)
 mapKey("<leader>md", function()
 	require("noice").cmd("dismiss")
 end)
-
-
--- [Plugin] vim-maximizer
-mapKey("<leader>mx", ":MaximizerToggle<CR>")
