@@ -35,8 +35,8 @@ opt.incsearch = true               -- 검색어 입력 실시간 찾기 활성�
 opt.hlsearch = true                -- 검색결과 하이라이트 활성화
 opt.signcolumn = "yes:1"           -- Git 변경사항 표시 활성화
 opt.hidden = true                  -- 열려있는 탭 저장하지 않아도 다른 탭 이동 가능하도록 설정
-opt.scrolloff = 8                  -- 수직이동 여백 8칸 설정
-opt.sidescrolloff = 8              -- 수평이동 여백 8칸 설정
+opt.scrolloff = 2                  -- 수직이동 여백 2칸 설정
+opt.sidescrolloff = 4              -- 수평이동 여백 4칸 설정
 opt.termguicolors = true           -- 256 이상 색상 활성화
 
 -- 파일 열기 마지막 부분 저장
