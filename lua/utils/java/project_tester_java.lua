@@ -161,6 +161,9 @@ local function project_tester_java(is_class)
 			is_running = false
 			error_occured = false
 		end
+	else
+		is_running = false
+		error_occured = false
 	end
 end
 

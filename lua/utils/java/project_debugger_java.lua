@@ -151,6 +151,9 @@ local function project_debugger_java()
 			is_running = false
 			error_occured = false
 		end
+	else
+		is_running = false
+		error_occured = false
 	end
 end
 
