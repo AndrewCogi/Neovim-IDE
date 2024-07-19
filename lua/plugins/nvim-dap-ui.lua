@@ -72,7 +72,7 @@ return {
 						size = 0.65
 					},
 				},
-				size = 20,
+				size = 12,
 				position = "bottom", -- Can be "bottom" or "top"
 			}
 		},
