@@ -14,5 +14,10 @@ vim.g.clipboard = {
 }
 
 return {
-	"ojroques/nvim-osc52"
+	"ojroques/nvim-osc52",
+	config = function ()
+		require('osc52').setup({
+			silent = true
+		})
+	end
 }
