@@ -26,10 +26,10 @@ return {
 				'jdtls',
 				'lemminx',
 				'gradle_ls',
-				-- 'yamlls', -- require npm
+				'yamlls', -- require npm
+				'cssls', -- require npm
+				'html', -- require npm
 				-- 'bashls',-- require npm
-				-- 'cssls', -- require npm
-				-- 'html', -- require npm
 			}
 		})
 
