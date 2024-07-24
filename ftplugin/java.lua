@@ -129,6 +129,15 @@ local config = {
     -- References the bundles defined above to support Debugging and Unit Testing
     bundles = bundles
   },
+  -- Add handlers for status and progress messages
+  handlers = {
+    ['language/status'] = function(_, result)
+      print(result.message)
+    end,
+    ['$/progress'] = function(_, result, ctx)
+      -- disable progress updates
+    end,
+  },
 }
 
 -- Needed for debugging
