@@ -10,7 +10,7 @@ local function project_runner_java()
 			if is_spring_boot then
 				vim.cmd("split | term cd " .. root_dir .. " && mvn spring-boot:run")
 			else
-				vim.notify("There is no conf to run maven project. Try gradle project.")
+				vim.cmd("split | term cd " .. root_dir .. " && mvn exec:java")
 			end
 			vim.cmd("normal! G")
 		elseif vim.fn.filereadable(root_dir .. "/build.gradle") == 1 then
