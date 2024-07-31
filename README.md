@@ -101,23 +101,23 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 | Ctrl+v               | Paste from clipboard         |
 | Ctrl+v (visual mode) | Paste from clipboard         |
 
-### [Plugin] hop.nvim
+#### [Plugin] hop.nvim
 | Keymap          | Description                     |
 | --------------- | ------------------------------- |
 | &lt;leader&gt;s | Jump to character               |
 
-### [Plugin] kommentary
+#### [Plugin] kommentary
 | Keymap    | Description                                |
 | --------- | ------------------------------------------ |
 | Ctrl+/    | Toggle comment (normal and visual mode)    |
 
-### [Plugin] luasnip
+#### [Plugin] luasnip
 | Keymap    | Description                                                       |
 | --------- | ----------------------------------------------------------------- |
 | Ctrl+l    | Jump to the next snippet placeholder (insert and visual mode)     |
 | Ctrl+h    | Jump to the previous snippet placeholder (insert and visual mode) |
 
-### [Plugin] nvim-surround
+#### [Plugin] nvim-surround
 | Keymap          | Description                        |
 | --------------- | ---------------------------------- |
 | ys              | Surround text                      |
@@ -125,12 +125,12 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 | cs              | Change surrounding characters      |
 | S (visual mode) | Surround visual selection          |
 
-### [Plugin] FTerm
+#### [Plugin] FTerm
 | Keymap          | Description                   |
 | --------------- | ----------------------------- |
 | &lt;leader&gt;t | Toggle terminal               |
 
-### [Plugin] gitsigns.nvim
+#### [Plugin] gitsigns.nvim
 | Keymap    | Description                                 |
 | --------- | ------------------------------------------- |
 | ]g        | Go to next git hunk                         |
@@ -143,12 +143,12 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 | ghd       | Show diff for current file                  |
 | ghb       | Show blame for current line                 |
 
-### [Plugin] neo-tree.nvim
+#### [Plugin] neo-tree.nvim
 | Keymap          | Description                |
 | --------------- | -------------------------- |
 | &lt;leader&gt;e | Toggle file explorer       |
 
-### [Plugin] telescope
+#### [Plugin] telescope
 | Keymap           | Description                    |
 | ---------------- | ------------------------------ |
 | &lt;leader&gt;ff | Find files                     |
@@ -156,7 +156,7 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 | &lt;leader&gt;fb | List open buffers              |
 | &lt;leader&gt;fh | Find help tags                 |
 
-### [Plugin] nvim-lspconfig
+#### [Plugin] nvim-lspconfig
 | Keymap           | Description                                 |
 | ---------------- | ------------------------------------------- |
 | ?                | Show information                            |
@@ -167,7 +167,7 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 | &lt;leader&gt;rn | Rename symbol                               |
 | &lt;leader&gt;fm | Format code (normal and visual mode)        |
 
-### [Plugin] nvim-jdtls
+#### [Plugin] nvim-jdtls
 | Keymap           | Description                                 |
 | ---------------- | ------------------------------------------- |
 | &lt;leader&gt;ko | Organize imports                            |
@@ -179,7 +179,7 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 | &lt;leader&gt;kt | Test current class                          |
 | &lt;leader&gt;km | Test current method                         |
 
-### [Plugin] nvim-dap
+#### [Plugin] nvim-dap
 | Keymap           | Description                                 |
 | ---------------- | ------------------------------------------- |
 | &lt;leader&gt;du | Toggle DAP UI                               |
@@ -194,7 +194,7 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 | &lt;leader&gt;ds | Show session information                    |
 | &lt;leader&gt;dt | Terminate                                   |
 
-### [Plugin] noice.nvim
+#### [Plugin] noice.nvim
 | Keymap           | Description                                 |
 | ---------------- | ------------------------------------------- |
 | &lt;leader&gt;ms | Show message history                        |
