@@ -62,9 +62,11 @@ end, "v")
 -- St? : visual 모드로 잡은 범위를 <?>로 감싼다.
 
 
--- [Plugin] FTerm
--- normal 모드에서 터미널 창 띄우기
-mapKey("<leader>t", require("FTerm").toggle)
+-- [Plugin] toggleterm.nvim
+-- normal 모드에서 터미널 창 띄우기(horizontal)
+mapKey("<leader>t", ":ToggleTerm dir=%p direction=horizontal<CR>")
+-- normal 모드에서 터미널 창 띄우기(float)
+mapKey("<leader>T", ":ToggleTerm dir=%p direction=float<CR>")
 
 
 -- [Plugin] gitsigns.nvim
