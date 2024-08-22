@@ -16,6 +16,7 @@ install_neovim() { \
 
 install_prerequisite() { \
 	sudo apt install make zip gcc ripgrep jq npm -y
+	# brew install make zip gcc ripgrep jq node (for mac)
 }
 
 install_DalMuDee_v2_config() { \
@@ -23,20 +24,20 @@ install_DalMuDee_v2_config() { \
 }
 
 
-echo "[Install_DalMuDee_v2_config.sh] Welcome to DalMuDee_v2 installer"
+echo "[Install_DalMuDee_v2.sh] Welcome to DalMuDee_v2 installer"
 
-echo "[Install_DalMuDee_v2_config.sh] Initializing..."
+echo "[Install_DalMuDee_v2.sh] Initializing..."
 init
 
-echo "[Install_DalMuDee_v2_config.sh] Installing Neovim..."
+echo "[Install_DalMuDee_v2.sh] Installing Neovim..."
 install_neovim
 
-echo "[Install_DalMuDee_v2_config.sh] Installing prerequisite..."
+echo "[Install_DalMuDee_v2.sh] Installing prerequisite..."
 install_prerequisite
 
-echo "[Install_DalMuDee_v2_config.sh] Installing DalMuDee_v2 config..."
+echo "[Install_DalMuDee_v2.sh] Installing DalMuDee_v2 config..."
 install_DalMuDee_v2_config
 
-echo "[Install_DalMuDee_v2_config.sh] Installation Complete!"
-echo "[Install_DalMuDee_v2_config.sh] Now you can run neovim using the 'nvim' command."
-echo "[Install_DalMuDee_v2_config.sh] (First time running, it may take some time due to plugin installation)"
+echo "[Install_DalMuDee_v2.sh] Installation Complete!"
+echo "[Install_DalMuDee_v2.sh] Now you can run neovim using the 'nvim' command."
+echo "[Install_DalMuDee_v2.sh] (First time running, it may take some time due to plugin installation)"

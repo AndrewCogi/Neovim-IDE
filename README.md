@@ -3,7 +3,7 @@ DalMuDee_v2🌙
 </h1>
 
 <h3 align="center">
-My Personal Integrated Development Environment (for java)
+My Personal Integrated Development Environment
 </h3>
 
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
