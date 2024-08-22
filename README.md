@@ -20,6 +20,7 @@ My Personal Integrated Development Environment
 When I was serving in the military, the environment for programming was inadequate. So, I started this project with the idea of creating my own development environment, specifically for <strong>Java</strong> and <strong>Spring Boot</strong>.
 
 ## ✨Features
+- ✅ Available OS : Linux(Debian), Mac
 - ✅ Spring Boot 3 Tools
 - ✅ Also support html, css, js
 - ✅ Auto Completion & Diagnostics
@@ -32,23 +33,22 @@ When I was serving in the military, the environment for programming was inadequa
 
 ## ⚡️ Prerequisites
 
-* Ubuntu 20.04 or higher (64-bit x86)
 * RAM 2GB (minimum 1GB)
 * Make sure `~/.config/nvim` is empty.
 * [Nerd Font](https://www.nerdfonts.com/) *(optional)*
 
 ## 🔨 Installation
 
-**Install DalMuDee_v2 in ONE command**
+**Install DalMuDee_v2 in ONE command (Linux (Debian))**
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/Installer_DalMuDee_v2.sh)
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_DalMuDee_v2_linux_debian.sh)
 ```
 
-**Install Java17 & Springboot3 & Maven & Gradle in ONE command**
+**Install DalMuDee_v2 in ONE command (Mac)**
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/Installer_Java17_Springboot3_Maven_Gradle.sh)
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_DalMuDee_v2_mac.sh)
 ```
 
 ## ⌨️ Key mapping
@@ -202,3 +202,11 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 | &lt;leader&gt;md | Dismiss all messages                        |
 
 </details>
+
+## 📦 Utils
+
+**Install Java17 & Springboot3 & Maven & Gradle in ONE command (Linux (Debian))**
+
+```bash
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Java17_Springboot3_Maven_Gradle_linux_debian.sh)
+```
