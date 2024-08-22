@@ -205,8 +205,20 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 
 ## 📦 Utils
 
-**Install Springboot3 & Maven & Gradle (Linux (Debian))**
+**Install Maven & Gradle (Linux (Debian))**
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Springboot3_Maven_Gradle_linux_debian.sh)
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Maven_Gradle_linux_debian.sh)
+```
+
+**Install Maven & Gradle (Mac)**
+
+```bash
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Maven_Gradle_mac.sh)
+```
+
+**Install Springboot3 for CLI (Linux (Debian))**
+
+```bash
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Springboot3_linux_debian.sh)
 ```

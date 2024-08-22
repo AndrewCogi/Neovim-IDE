@@ -1,11 +1,11 @@
 #!/bin/bash
 
-init() { \
+init() {
 	sudo apt update
 	sudo apt upgrade -y
 }
 
-install_neovim() { \
+install_neovim() {
 	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 	sudo rm -rf /opt/nvim
 	sudo tar -C /opt -xzf nvim-linux64.tar.gz
@@ -14,15 +14,15 @@ install_neovim() { \
  	source $HOME/.bashrc
 }
 
-install_prerequisite() { \
+install_prerequisite() {
 	sudo apt install make zip gcc ripgrep jq npm -y
 }
 
-install_java17() { \
+install_java17() {
 	sudo apt install openjdk-17-jdk -y
 }
 
-install_DalMuDee_v2_config() { \
+install_DalMuDee_v2_config() {
 	git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 }
 

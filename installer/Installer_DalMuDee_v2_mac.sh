@@ -1,6 +1,6 @@
 #!/bin/bash
 
-init() { 
+init() {
     echo "[Install_DalMuDee_v2.sh] Checking for Homebrew..."
     if ! command -v brew &> /dev/null; then
         echo "[Install_DalMuDee_v2.sh] Homebrew is not installed."
@@ -14,22 +14,22 @@ init() {
     fi
 }
 
-install_neovim() { \
+install_neovim() {
 	brew install neovim
 }
 
-install_prerequisite() { \
+install_prerequisite() {
 	brew install make zip gcc ripgrep jq node
 }
 
-install_java17() { \
+install_java17() {
     brew install openjdk@17
     echo 'export JAVA_HOME=$(brew --prefix openjdk@17)/libexec/openjdk.jdk/Contents/Home' >> ~/.zshrc
     echo 'export PATH=$PATH:$JAVA_HOME/bin' >> ~/.zshrc
     source ~/.zshrc
 }
 
-install_DalMuDee_v2_config() { \
+install_DalMuDee_v2_config() {
 	git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 }
 
