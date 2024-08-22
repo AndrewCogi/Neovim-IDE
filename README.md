@@ -106,10 +106,11 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 | --------------- | ------------------------------- |
 | &lt;leader&gt;s | Jump to character               |
 
-#### [Plugin] kommentary
-| Keymap    | Description                                |
-| --------- | ------------------------------------------ |
-| Ctrl+/    | Toggle comment (normal and visual mode)    |
+#### [Plugin] Comment.nvim
+| Keymap    | Description                                         |
+| --------- | --------------------------------------------------- |
+| gcc       | Toggles the current line comment (normal mode)      |
+| gc        | Toggles the region linewise comment (visual mode)   |
 
 #### [Plugin] luasnip
 | Keymap    | Description                                                       |

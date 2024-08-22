@@ -19,10 +19,9 @@ mapKey("<C-v>", "p", "x")
 mapKey("<leader>s", require("hop").hint_char2)
 
 
--- [Plugin] kommentary
--- normal 모드에서 ctrl+/ 로 주석처리, visual 모드에서 ctrl+/ 로 주석처리
-mapKey("<C-_>", "<Plug>kommentary_line_default")
-mapKey("<C-_>", "<Plug>kommentary_visual_default", "x")
+-- [Plugin] Comment.nvim
+-- normal 모드에서 gcc 로 해당 라인 주석처리
+-- visual 모드에서 gc 로 블럭 주석처리
 
 
 -- [Plugin] luasnip
