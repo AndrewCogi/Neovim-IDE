@@ -3,6 +3,19 @@ local jdtls = require('jdtls')
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local workspace_dir = vim.env.HOME .. '/jdtls-workspace/' .. project_name
 
+-- java_17_home_path
+local java_17_path
+-- 운영 체제에 따라 Java 경로 설정
+if vim.fn.has("macunix") == 1 then
+  -- Mac
+  java_17_path = '/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home'
+elseif vim.fn.has("unix") == 1 then
+  -- Linux (debian)
+  java_17_path = '/usr/lib/jvm/java-17-openjdk-amd64'
+else
+	java_17_path = 'error; find this log in ~/.config/nvim/ftplugin/java.lua'
+end
+
 -- Needed for debugging
 local bundles = {
   vim.fn.glob(vim.env.HOME .. '/.local/share/nvim/mason/share/java-debug-adapter/com.microsoft.java.debug.plugin.jar'),
@@ -44,7 +57,7 @@ local config = {
   settings = {
     java = {
       -- TODO Replace this with the absolute path to your main java version (JDK 17 or higher)
-      home = '/usr/lib/jvm/java-17-openjdk-amd64',
+      home = java_17_path,
       eclipse = {
         downloadSources = true,
       },
@@ -59,7 +72,7 @@ local config = {
           }, ]]
           {
             name = "JavaSE-17",
-            path = "/usr/lib/jvm/java-17-openjdk-amd64",
+            path = java_17_path,
           },
           --[[ {
             name = "JavaSE-19",
