@@ -16,7 +16,6 @@ install_neovim() { \
 
 install_prerequisite() { \
 	sudo apt install make zip gcc ripgrep jq npm -y
-	# brew install make zip gcc ripgrep jq node (for mac)
 }
 
 install_DalMuDee_v2_config() { \
