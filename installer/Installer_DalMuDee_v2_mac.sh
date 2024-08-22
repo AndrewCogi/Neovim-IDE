@@ -22,6 +22,13 @@ install_prerequisite() { \
 	brew install make zip gcc ripgrep jq node
 }
 
+install_java17() { \
+    brew install openjdk@17
+    echo 'export JAVA_HOME=$(brew --prefix openjdk@17)/libexec/openjdk.jdk/Contents/Home' >> ~/.zshrc
+    echo 'export PATH=$PATH:$JAVA_HOME/bin' >> ~/.zshrc
+    source ~/.zshrc
+}
+
 install_DalMuDee_v2_config() { \
 	git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 }
@@ -37,6 +44,7 @@ install_neovim
 
 echo "[Install_DalMuDee_v2.sh] Installing prerequisite..."
 install_prerequisite
+install_java17
 
 echo "[Install_DalMuDee_v2.sh] Installing DalMuDee_v2 config..."
 install_DalMuDee_v2_config

@@ -205,8 +205,8 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 
 ## 📦 Utils
 
-**Install Java17 & Springboot3 & Maven & Gradle in ONE command (Linux (Debian))**
+**Install Springboot3 & Maven & Gradle (Linux (Debian))**
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Java17_Springboot3_Maven_Gradle_linux_debian.sh)
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Springboot3_Maven_Gradle_linux_debian.sh)
 ```

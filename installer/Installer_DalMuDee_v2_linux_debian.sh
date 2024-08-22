@@ -18,6 +18,10 @@ install_prerequisite() { \
 	sudo apt install make zip gcc ripgrep jq npm -y
 }
 
+install_java17() { \
+	sudo apt install openjdk-17-jdk -y
+}
+
 install_DalMuDee_v2_config() { \
 	git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 }
@@ -33,6 +37,7 @@ install_neovim
 
 echo "[Install_DalMuDee_v2.sh] Installing prerequisite..."
 install_prerequisite
+install_java17
 
 echo "[Install_DalMuDee_v2.sh] Installing DalMuDee_v2 config..."
 install_DalMuDee_v2_config
