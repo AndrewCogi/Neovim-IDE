@@ -3,17 +3,21 @@ local jdtls = require('jdtls')
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local workspace_dir = vim.env.HOME .. '/jdtls-workspace/' .. project_name
 
--- java_17_home_path
+-- 운영 체제에 따라 변수 설정
 local java_17_path
--- 운영 체제에 따라 Java 경로 설정
+local configuration_os
+
 if vim.fn.has("macunix") == 1 then
   -- Mac
   java_17_path = '/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home'
+	configuration_os = 'config_mac'
 elseif vim.fn.has("unix") == 1 then
   -- Linux (debian)
   java_17_path = '/usr/lib/jvm/java-17-openjdk-amd64'
+  configuration_os = 'config_linux'
 else
-	java_17_path = 'error; find this log in ~/.config/nvim/ftplugin/java.lua'
+  java_17_path = 'error; find this log in ~/.config/nvim/ftplugin/java.lua'
+  configuration_os = 'error; find this log in ~/.config/nvim/ftplugin/java.lua'
 end
 
 -- Needed for debugging
@@ -44,7 +48,7 @@ local config = {
     -- Eclipse jdtls location
     '-jar', vim.env.HOME .. '/.local/share/nvim/mason/share/jdtls/plugins/org.eclipse.equinox.launcher.jar',
     -- TODO Update this to point to the correct jdtls subdirectory for your OS (config_linux, config_mac, config_win, etc)
-    '-configuration', vim.env.HOME .. '/.local/share/nvim/mason/packages/jdtls/config_linux',
+    '-configuration', vim.env.HOME .. '/.local/share/nvim/mason/packages/jdtls/' .. configuration_os,
     '-data', workspace_dir
   },
 
