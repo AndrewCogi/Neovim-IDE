@@ -24,6 +24,19 @@ return {
 				filename_first = {
 					reverse_directories = true
 				}
+			},
+			-- 특정 파일 보이지 않도록
+			file_ignore_patterns = {
+				".git/",
+				".cache",
+				"%.o",
+				"%.a",
+				"%.out",
+				"%.class",
+				"%.pdf",
+				"%.mkv",
+				"%.mp4",
+				"%.zip"
 			}
 		}
 	}
