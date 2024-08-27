@@ -10,7 +10,7 @@ local function project_runner_java()
 			if is_spring_boot then
 				vim.cmd("split | term cd " .. root_dir .. " && mvn spring-boot:run")
 			else
-				vim.cmd("split | term cd " .. root_dir .. " && mvn compile exec:java")
+				vim.cmd("split | term cd " .. root_dir .. " && mvn -q compile exec:java")
 			end
 			vim.cmd("normal! G")
 		elseif vim.fn.filereadable(root_dir .. "/build.gradle") == 1 then
@@ -20,7 +20,7 @@ local function project_runner_java()
 			if is_spring_boot then
 				vim.cmd("split | term cd " .. root_dir .. " && gradle bootRun --console=plain")
 			else
-				vim.cmd("split | term cd " .. root_dir .. " && gradle run --console=plain")
+				vim.cmd("split | term cd " .. root_dir .. " && gradle run --console=plain -q")
 			end
 			vim.cmd("normal! G")
 		end
