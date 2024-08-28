@@ -140,13 +140,7 @@ mapKey("<leader>xv", function()
 		require("jdtls").extract_variable()
 	end
 end)
--- make test
-mapKey("<leader>tg", function()
-	if vim.bo.filetype == 'java' then
-		require("jdtls.tests").generate()
-	end
-end)
--- goto test
+-- make test / goto test
 mapKey("<leader>gt", function()
 	if vim.bo.filetype == 'java' then
 		require("jdtls.tests").goto_subjects()
