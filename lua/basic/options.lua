@@ -48,3 +48,8 @@ vim.cmd([[
    \ endif
    endif
 ]])
+
+-- 주석된 줄에서 새 줄을 생성할 때, 자동 주석 추가 기능 방지
+vim.cmd([[
+	autocmd FileType * setlocal formatoptions-=ro
+]])
