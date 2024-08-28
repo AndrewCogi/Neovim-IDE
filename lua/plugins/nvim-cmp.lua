@@ -22,7 +22,13 @@ return {
 		local defaults = require("cmp.config.default")()
 		local luasnip = require("luasnip")
 		require("luasnip.loaders.from_vscode").lazy_load()
+		require("luasnip.loaders.from_lua").lazy_load({ paths = { "~/.config/nvim/lua/plugins/custom-snippets" } })
 		luasnip.config.setup({})
+		luasnip.config.set_config({
+			history = true,
+			updateevents = "TextChanged,TextChangedI",
+		})
+
 
 		cmp.setup({
 			snippet = {
