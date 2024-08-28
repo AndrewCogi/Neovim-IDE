@@ -27,3 +27,6 @@ require("lazy").setup("plugins", {
 
 -- plugin keymaps 설정 적용
 require("plugins.keymaps.keymaps")
+
+-- project_springboot_devtools_support_java 설정 적용
+require("utils.java.project_springboot_devtools_support_java")
