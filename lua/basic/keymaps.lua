@@ -28,11 +28,17 @@ mapKey("<C-j>", "<C-w>j")
 mapKey("<C-k>", "<C-w>k")
 mapKey("<C-l>", "<C-w>l")
 
--- normal 모드에서 창 크기 조절
+-- normal 모드에서 창 크기 조절 (ctrl)
 mapKey("<C-Up>", ":resize -1<CR>")
 mapKey("<C-Down>", ":resize +1<CR>")
 mapKey("<C-Left>", ":vertical resize -2<CR>")
 mapKey("<C-Right>", ":vertical resize +2<CR>")
+
+-- normal 모드에서 창 크기 조절 (ctrl+shift)
+mapKey("<C-S-Up>", ":resize -1<CR>")
+mapKey("<C-S-Down>", ":resize +1<CR>")
+mapKey("<C-S-Left>", ":vertical resize -2<CR>")
+mapKey("<C-S-Right>", ":vertical resize +2<CR>")
 
 -- visual 모드에서 >> << 실행 후에도 visual block 유지
 mapKey("<", "<gv", "v")
