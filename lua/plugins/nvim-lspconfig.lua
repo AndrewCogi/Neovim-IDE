@@ -29,7 +29,8 @@ return {
 				'yamlls', 		-- yaml,yml (require npm)
 				'cssls', 		-- css (require npm)
 				'html', 		-- html (require npm)
-				'tsserver' 		-- js (require npm)
+				'tsserver',		-- js (require npm)
+				'jsonls'		-- json (require npm)
 			}
 		})
 
