@@ -6,12 +6,19 @@ init() {
 }
 
 install_neovim() {
-	curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-	sudo rm -rf /opt/nvim
-	sudo tar -C /opt -xzf nvim-linux64.tar.gz
-	sudo rm -f nvim-linux64.tar.gz
-	echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> $HOME/.bashrc
- 	source $HOME/.bashrc
+	ARCH = $(uname -m)
+	if [[ $ARCH != "x86_64" ]]; then
+		echo("ERROR : neovim unsupport your architecture: (your architecture: $ARCH)")
+		echo("[Install_DalMuDee_v2] Installation Failed.")
+		return 1
+	else
+		curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+		sudo rm -rf /opt/nvim
+		sudo tar -C /opt -xzf nvim-linux64.tar.gz
+		sudo rm -f nvim-linux64.tar.gz
+		echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> $HOME/.bashrc
+		source $HOME/.bashrc
+	fi
 }
 
 install_prerequisite() {
