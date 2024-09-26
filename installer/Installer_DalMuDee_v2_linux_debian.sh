@@ -8,8 +8,8 @@ init() {
 install_neovim() {
 	ARCH = $(uname -m)
 	if [[ $ARCH != "x86_64" ]]; then
-		echo("ERROR : neovim unsupport your architecture: (your architecture: $ARCH)")
-		echo("[Install_DalMuDee_v2] Installation Failed.")
+		echo "ERROR : neovim unsupport your architecture: (your architecture: $ARCH)"
+		echo "[Install_DalMuDee_v2] Installation Failed."
 		return 1
 	else
 		curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
