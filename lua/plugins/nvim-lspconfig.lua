@@ -18,21 +18,30 @@ return {
 		{ 'folke/neodev.nvim' },
 	},
 	config = function()
+	    local arch = vim.loop.os_uname().machine
+
+		-- platform independent LSP list
+		local lsp_install_list = {
+			'lua_ls', 		-- lua
+			'jdtls',		-- java
+			'gradle_ls',	-- gradle
+			'yamlls', 		-- yaml,yml (require npm)
+			'cssls', 		-- css (require npm)
+			'html', 		-- html (require npm)
+			'ts_ls',		-- js (require npm)
+			'jsonls',		-- json (require npm)
+			'pyright'		-- python
+		}
+
+		-- platform dependent LSP list
+		if arch ~= 'aarch64' then
+			table.insert(lsp_install_list, 'lemminx') -- xml
+		end
+
 		require('mason').setup()
 		require('mason-lspconfig').setup({
 			-- Install these LSPs automatically
-			ensure_installed = {
-				'lua_ls', 		-- lua
-				'jdtls',		-- java
-				'lemminx',		-- xml
-				'gradle_ls',	-- gradle
-				'yamlls', 		-- yaml,yml (require npm)
-				'cssls', 		-- css (require npm)
-				'html', 		-- html (require npm)
-				'ts_ls',		-- js (require npm)
-				'jsonls',		-- json (require npm)
-				'pyright'		-- python
-			}
+			ensure_installed = lsp_install_list
 		})
 
 		require('mason-tool-installer').setup({
