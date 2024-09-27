@@ -39,10 +39,10 @@ When I was serving in the military, the environment for programming was inadequa
 
 ## 🔨 Installation
 
-**Install DalMuDee_v2 in ONE command (Linux (x86_64))**
+**Install DalMuDee_v2 in ONE command (Ubuntu (x86_64))**
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_DalMuDee_v2_linux_debian.sh)
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_DalMuDee_v2_ubuntu_x86_64.sh)
 ```
 
 **Install DalMuDee_v2 in ONE command (Mac)**
@@ -206,10 +206,10 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 
 ## 📦 Utils
 
-**Install Maven & Gradle (Linux (x86_64))**
+**Install Maven & Gradle (Ubuntu (x86_64))**
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Maven_Gradle_linux_debian.sh)
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Maven_Gradle_ubuntu_x86_64.sh)
 ```
 
 **Install Maven & Gradle (Mac)**
@@ -218,8 +218,8 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Maven_Gradle_mac.sh)
 ```
 
-**Install Springboot3 for CLI (Linux (x86_64))**
+**Install Springboot3 for CLI (Ubuntu (x86_64))**
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Springboot3_linux_debian.sh)
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Springboot3_ubuntu_x86_64.sh)
 ```
