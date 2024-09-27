@@ -39,7 +39,7 @@ When I was serving in the military, the environment for programming was inadequa
 
 ## 🔨 Installation
 
-**Install DalMuDee_v2 in ONE command (Linux (Debian))**
+**Install DalMuDee_v2 in ONE command (Linux (x86_64))**
 
 ```bash
 source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_DalMuDee_v2_linux_debian.sh)
@@ -206,7 +206,7 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 
 ## 📦 Utils
 
-**Install Maven & Gradle (Linux (Debian))**
+**Install Maven & Gradle (Linux (x86_64))**
 
 ```bash
 source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Maven_Gradle_linux_debian.sh)
@@ -218,7 +218,7 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Maven_Gradle_mac.sh)
 ```
 
-**Install Springboot3 for CLI (Linux (Debian))**
+**Install Springboot3 for CLI (Linux (x86_64))**
 
 ```bash
 source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_Springboot3_linux_debian.sh)
