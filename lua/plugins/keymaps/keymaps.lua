@@ -146,9 +146,18 @@ mapKey("<leader>gt", function()
 		require("jdtls.tests").goto_subjects()
 	end
 end)
--- run project
+-- run
 mapKey("<leader>kr", function()
-	require("utils.java.project_runner_java").project_runner_java()
+	-- java file
+	if vim.bo.filetype == 'java' then
+		vim.cmd("split | term javac " .. vim.fn.expand('%:p') .. " && java " .. vim.fn.expand('%:p'))
+	-- python file
+	elseif vim.bo.filetype == 'python' then
+		vim.cmd("split | term python3 " .. vim.fn.expand('%:p'))
+	-- java project
+	else
+		require("utils.java.project_runner_java").project_runner_java()
+	end
 end)
 -- test current class
 mapKey("<leader>kt", function()
