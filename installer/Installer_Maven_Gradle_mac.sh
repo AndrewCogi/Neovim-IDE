@@ -1,14 +1,14 @@
 #!/bin/bash
 
 init() {
-	echo "[Install_Maven_Gradle.sh] Checking for Homebrew..."
+	echo "[Install_Maven_Gradle_mac.sh] Checking for Homebrew..."
 	if ! command -v brew &> /dev/null; then
-        echo "[Install_Maven_Gradle.sh] Homebrew is not installed."
-        echo "[Install_Maven_Gradle.sh] Please install Homebrew and try again."
-        echo "[Install_Maven_Gradle.sh] Installation Site : https://brew.sh/"
+        echo "[Install_Maven_Gradle_mac.sh] Homebrew is not installed."
+        echo "[Install_Maven_Gradle_mac.sh] Please install Homebrew and try again."
+        echo "[Install_Maven_Gradle_mac.sh] Installation Site : https://brew.sh/"
         exit 1
     else
-        echo "[Install_Maven_Gradle.sh] Homebrew is already installed."
+        echo "[Install_Maven_Gradle_mac.sh] Homebrew is already installed."
         brew update
         brew upgrade
     fi
@@ -27,18 +27,18 @@ install_gradle() {
 }
 
 
-echo "[Install_Maven_Gradle.sh] Welcome to Maven_Gradle installer"
+echo "[Install_Maven_Gradle_mac.sh] Welcome to Maven_Gradle installer"
 
-echo "[Install_Maven_Gradle.sh] Initializing..."
+echo "[Install_Maven_Gradle_mac.sh] Initializing..."
 init
 
-echo "[Install_Maven_Gradle.sh] Installing prerequisite..."
+echo "[Install_Maven_Gradle_mac.sh] Installing prerequisite..."
 install_prerequisite
 
-echo "[Install_Maven_Gradle.sh] Installing Maven..."
+echo "[Install_Maven_Gradle_mac.sh] Installing Maven..."
 install_maven
 
-echo "[Install_Maven_Gradle.sh] Installing Gradle..."
+echo "[Install_Maven_Gradle_mac.sh] Installing Gradle..."
 install_gradle
 
-echo "[Install_Maven_Gradle.sh] Installation Complete!"
+echo "[Install_Maven_Gradle_mac.sh] Installation Complete!"

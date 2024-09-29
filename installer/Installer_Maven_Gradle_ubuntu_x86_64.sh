@@ -24,21 +24,21 @@ install_gradle() {
 }
 
 
-echo "[Install_Maven_Gradle.sh] Welcome to Maven_Gradle installer"
+echo "[Install_Maven_Gradle_ubuntu_x86_64.sh] Welcome to Maven_Gradle installer"
 
-echo "[Install_Maven_Gradle.sh] Initializing..."
+echo "[Install_Maven_Gradle_ubuntu_x86_64.sh] Initializing..."
 init
 
-echo "[Install_Maven_Gradle.sh] Installing prerequisite..."
+echo "[Install_Maven_Gradle_ubuntu_x86_64.sh] Installing prerequisite..."
 install_prerequisite
 
-echo "[Install_Maven_Gradle.sh] Installing sdkman for Gradle..."
+echo "[Install_Maven_Gradle_ubuntu_x86_64.sh] Installing sdkman for Gradle..."
 install_sdkman
 
-echo "[Install_Maven_Gradle.sh] Installing Maven..."
+echo "[Install_Maven_Gradle_ubuntu_x86_64.sh] Installing Maven..."
 install_maven
 
-echo "[Install_Maven_Gradle.sh] Installing Gradle..."
+echo "[Install_Maven_Gradle_ubuntu_x86_64.sh] Installing Gradle..."
 install_gradle
 
-echo "[Install_Maven_Gradle.sh] Installation Complete!"
+echo "[Install_Maven_Gradle_ubuntu_x86_64.sh] Installation Complete!"

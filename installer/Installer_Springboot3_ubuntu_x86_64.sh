@@ -20,18 +20,18 @@ install_springboot3() {
 }
 
 
-echo "[Install_Springboot3.sh] Welcome to Springboot3 installer"
+echo "[Install_Springboot3_ubuntu_x86_64.sh] Welcome to Springboot3 installer"
 
-echo "[Install_Springboot3.sh] Initializing..."
+echo "[Install_Springboot3_ubuntu_x86_64.sh] Initializing..."
 init
 
-echo "[Install_Springboot3.sh] Installing prerequisite..."
+echo "[Install_Springboot3_ubuntu_x86_64.sh] Installing prerequisite..."
 install_prerequisite
 
-echo "[Install_Springboot3.sh] Installing sdkman for Springboot3..."
+echo "[Install_Springboot3_ubuntu_x86_64.sh] Installing sdkman for Springboot3..."
 install_sdkman
 
-echo "[Install_Springboot3.sh] Installing Springboot3..."
+echo "[Install_Springboot3_ubuntu_x86_64.sh] Installing Springboot3..."
 install_springboot3
 
-echo "[Install_Springboot3.sh] Installation Complete!"
+echo "[Install_Springboot3_ubuntu_x86_64.sh] Installation Complete!"
