@@ -121,6 +121,8 @@ mapKey("<leader>rn", vim.lsp.buf.rename)
 -- formatting
 mapKey("<leader>fm", "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "n")
 mapKey("<leader>fm", "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "v")
+-- lsp restart
+mapKey("<leader>lr", ":LspRestart<CR>")
 
 
 -- [Plugin] nvim-jdtls
