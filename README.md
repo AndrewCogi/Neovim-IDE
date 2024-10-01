@@ -20,7 +20,7 @@ My Personal Integrated Development Environment
 When I was serving in the military, the environment for programming was inadequate. So, I started this project with the idea of creating my own development environment, specifically for <strong>Java</strong> and <strong>Spring Boot</strong>.
 
 ## ✨Features
-- ✅ Available OS : Linux(Debian), Mac
+- ✅ Available OS : Linux AMD, Linux ARM, MacOS Silicon/ARM, MacOS Intel/AMD
 - ✅ Spring Boot 3 Tools
 - ✅ Also support html, css, js
 - ✅ Auto Completion & Diagnostics
@@ -33,22 +33,16 @@ When I was serving in the military, the environment for programming was inadequa
 
 ## ⚡️ Prerequisites
 
-* RAM 2GB (minimum 1GB)
+* RAM 4GB (minimum 2GB)
 * Make sure `~/.config/nvim` is empty.
 * [Nerd Font](https://www.nerdfonts.com/) *(optional)*
 
 ## 🔨 Installation
 
-**Install DalMuDee_v2 in ONE command (Ubuntu (x86_64))**
+**Install DalMuDee_v2 in ONE command**
 
 ```bash
-source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_DalMuDee_v2_ubuntu_x86_64.sh)
-```
-
-**Install DalMuDee_v2 in ONE command (Mac)**
-
-```bash
-source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/Installer_DalMuDee_v2_mac.sh)
+source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/DalMuDee_IDE.sh)
 ```
 
 ## ⌨️ Key mapping
