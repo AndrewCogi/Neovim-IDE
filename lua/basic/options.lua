@@ -53,3 +53,10 @@ vim.cmd([[
 vim.cmd([[
 	autocmd FileType * setlocal formatoptions-=ro
 ]])
+
+-- Linux 운영체제 사용 시, 기본 터미널 bash로 설정
+local is_linux = vim.loop.os_uname().sysname == "Linux"
+
+if is_linux then
+  vim.opt.shell = '/bin/bash'
+end
