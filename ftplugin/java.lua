@@ -6,15 +6,31 @@ local workspace_dir = vim.env.HOME .. '/jdtls-workspace/' .. project_name
 -- 운영 체제에 따라 변수 설정
 local java_17_path
 local configuration_os
+local uname = vim.loop.os_uname().machine
 
+-- Mac
 if vim.fn.has("macunix") == 1 then
-  -- Mac
-  java_17_path = '/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home'
+  -- Mac ARM
+  if uname == "arm64" then
+	java_17_path = '/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home'
 	configuration_os = 'config_mac'
+  else
+  -- Mac AMD
+	java_17_path = '/usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home'
+	configuration_os = 'config_mac'
+  end
+-- Linux
 elseif vim.fn.has("unix") == 1 then
-  -- Linux (debian)
-  java_17_path = '/usr/lib/jvm/java-17-openjdk-amd64'
-  configuration_os = 'config_linux'
+  -- Linux ARM
+  if uname == "aarch64" then
+  	java_17_path = '/usr/lib/jvm/java-17-openjdk-arm64'
+  	configuration_os = 'config_linux'
+  -- Linux AMD
+  else
+  	java_17_path = '/usr/lib/jvm/java-17-openjdk-amd64'
+  	configuration_os = 'config_linux'
+  end
+-- Others
 else
   java_17_path = 'error; find this log in ~/.config/nvim/ftplugin/java.lua'
   configuration_os = 'error; find this log in ~/.config/nvim/ftplugin/java.lua'
