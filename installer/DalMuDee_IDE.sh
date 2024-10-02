@@ -38,8 +38,10 @@ case $architecture in
 		echo -e ${GREEN}"[DalMuDee_IDE (1/11)] Updating package lists..."${NC}
 		sudo apt update
 
-		echo -e ${GREEN}"[DalMuDee_IDE (2/11)] Installing essential components for Neovim build...\n    (ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl)"${NC}
-		sudo apt install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl -y
+		# echo -e ${GREEN}"[DalMuDee_IDE (2/11)] Installing essential components for Neovim build...\n    (ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl)"${NC}
+		echo -e ${GREEN}"[DalMuDee_IDE (2/11)] Installing essential components for Neovim build...\n    (git make cmake gettext)"${NC}
+		# sudo apt install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl -y
+		sudo apt install git make cmake gettext -y
 
 		echo -e ${GREEN}"[DalMuDee_IDE (3/11)] Installing Neovim..."${NC}
 		if command -v nvim &> /dev/null
@@ -76,7 +78,6 @@ case $architecture in
 
 		echo -e ${GREEN}"[DalMuDee_IDE (10/11)] Installing essential components for DalMuDee...(java 17)"${NC}
 		sudo apt install openjdk-17-jdk -y
-		brew install openjdk@17
 
 		echo -e ${GREEN}"[DalMuDee_IDE (11/11)] Copying DalMuDee configuration file from git..."${NC}
 		git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
@@ -125,7 +126,6 @@ case $architecture in
 
 		echo -e ${GREEN}"[DalMuDee_IDE (10/11)] Installing essential components for DalMuDee...(java 17)"${NC}
 		sudo apt install openjdk-17-jdk -y
-		brew install openjdk@17
 
 		echo -e ${GREEN}"[DalMuDee_IDE (11/11)] Copying DalMuDee configuration file from git..."${NC}
 		git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
