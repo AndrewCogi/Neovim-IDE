@@ -1,11 +1,12 @@
 # author : AndrewCogi
-# Dockerfile for DalMuDee-IDE
+# Dockerfile for DalMuDee-IDE (base)
+# Tag [base] : includes DalMuDee-IDE, Java 17, Python 3.12
 
 FROM ubuntu:24.04
 
 ENV HOME=/root
 
-# init
+# Init
 RUN apt update
 RUN apt install sudo curl -y
 
