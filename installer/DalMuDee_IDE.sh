@@ -214,7 +214,7 @@ case $architecture in
 		echo -e ${GREEN}"[DalMuDee_IDE (10/10)] Copying DalMuDee configuration file from git..."${NC}
 		git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 
-		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"
+		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"${NC}
 		;;
 	*)
 esac
