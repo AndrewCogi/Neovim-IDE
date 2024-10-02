@@ -40,9 +40,7 @@ case $architecture in
 		echo -e ${GREEN}"[DalMuDee_IDE (1/11)] Updating package lists..."${NC}
 		sudo apt update
 
-		# echo -e ${GREEN}"[DalMuDee_IDE (2/11)] Installing essential components for Neovim build...\n    (ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl)"${NC}
 		echo -e ${GREEN}"[DalMuDee_IDE (2/11)] Installing essential components for Neovim build...\n    (git make cmake gettext)"${NC}
-		# sudo apt install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl -y
 		sudo apt install git make cmake gettext -y
 
 		echo -e ${GREEN}"[DalMuDee_IDE (3/11)] Installing Neovim..."${NC}
@@ -82,6 +80,7 @@ case $architecture in
 		sudo apt install openjdk-17-jdk -y
 
 		echo -e ${GREEN}"[DalMuDee_IDE (11/11)] Copying DalMuDee configuration file from git..."${NC}
+		rm -rf ~/.config/nvim
 		git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 
 		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"${NC}
@@ -90,8 +89,8 @@ case $architecture in
 		echo -e ${GREEN}"[DalMuDee_IDE (1/11)] Updating package lists..."${NC}
 		sudo apt update
 
-		echo -e ${GREEN}"[DalMuDee_IDE (2/11)] Installing essential components for Neovim build...\n    (ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl)"${NC}
-		sudo apt install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl -y
+		echo -e ${GREEN}"[DalMuDee_IDE (2/11)] Installing essential components for Neovim build...\n    (git make cmake gettext)"${NC}
+		sudo apt install git make cmake gettext -y
 
 		echo -e ${GREEN}"[DalMuDee_IDE (3/11)] Installing Neovim..."${NC}
 		if command -v nvim &> /dev/null
@@ -130,6 +129,7 @@ case $architecture in
 		sudo apt install openjdk-17-jdk -y
 
 		echo -e ${GREEN}"[DalMuDee_IDE (11/11)] Copying DalMuDee configuration file from git..."${NC}
+		rm -rf ~/.config/nvim
 		git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 
 		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"${NC}
@@ -172,6 +172,7 @@ case $architecture in
 		source ~/.zshrc
 
 		echo -e ${GREEN}"[DalMuDee_IDE (10/10)] Copying DalMuDee configuration file from git..."${NC}
+		rm -rf ~/.config/nvim
 		git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 
 		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"${NC}
@@ -214,6 +215,7 @@ case $architecture in
 		source ~/.zshrc
 
 		echo -e ${GREEN}"[DalMuDee_IDE (10/10)] Copying DalMuDee configuration file from git..."${NC}
+		rm -rf ~/.config/nvim
 		git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 
 		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"${NC}
