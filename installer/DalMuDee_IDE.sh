@@ -84,7 +84,7 @@ case $architecture in
 		echo -e ${GREEN}"[DalMuDee_IDE (11/11)] Copying DalMuDee configuration file from git..."${NC}
 		git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 
-		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"
+		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"${NC}
 		;;
 	"linux-arm64")
 		echo -e ${GREEN}"[DalMuDee_IDE (1/11)] Updating package lists..."${NC}
@@ -132,7 +132,7 @@ case $architecture in
 		echo -e ${GREEN}"[DalMuDee_IDE (11/11)] Copying DalMuDee configuration file from git..."${NC}
 		git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 
-		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"
+		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"${NC}
 		;;
 	"macos-amd64")
 		echo -e ${GREEN}"[DalMuDee_IDE (1/10)] Checking for Homebrew installation..."${NC}
@@ -174,7 +174,7 @@ case $architecture in
 		echo -e ${GREEN}"[DalMuDee_IDE (10/10)] Copying DalMuDee configuration file from git..."${NC}
 		git clone https://github.com/AndrewCogi/DalMuDee_v2.git ~/.config/nvim
 
-		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"
+		echo -e ${GREEN}"[DalMuDee_IDE] Installation Complete!\n"${NC}${YELLOW}"    Now you can run neovim using the 'nvim' command.\n    (First time running, it may take some time due to plugin installation)"${NC}
 		;;
 	"macos-arm64")
 		echo -e ${GREEN}"[DalMuDee_IDE (1/10)] Checking for Homebrew installation..."${NC}
