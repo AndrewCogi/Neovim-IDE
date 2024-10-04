@@ -150,15 +150,14 @@ mapKey("<leader>gt", function()
 end)
 -- run
 mapKey("<leader>kr", function()
-	-- java file
+	-- java
 	if vim.bo.filetype == 'java' then
-		vim.cmd("split | term javac " .. vim.fn.expand('%:p') .. " && java " .. vim.fn.expand('%:p'))
-	-- python file
+		require("utils.java.project_runner_java").project_runner_java()
+	-- python
 	elseif vim.bo.filetype == 'python' then
 		vim.cmd("split | term python3 " .. vim.fn.expand('%:p'))
-	-- java project
 	else
-		require("utils.java.project_runner_java").project_runner_java()
+		-- nothing
 	end
 end)
 -- test current class
