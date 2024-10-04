@@ -58,13 +58,17 @@ vim.cmd([[
 local is_linux = vim.loop.os_uname().sysname == "Linux"
 if is_linux then
 	vim.opt.shell = '/bin/bash'
-	-- conda active된 환경이 있다면 terminal에 적용
 	local conda_env = vim.env.CONDA_DEFAULT_ENV
+	-- base가 아닌 다른 conda 환경이라면(사용자 지정 환경이라면), 해당 conda 환경 맞게 터미널 열기
 	vim.api.nvim_create_autocmd("TermOpen", {
 		pattern = "*",
 		callback = function()
-			if conda_env ~= nil then
-				vim.fn.jobstart("conda activate " .. conda_env, { detach = false, stdout_buffered = false })
+			if conda_env ~= nil and conda_env ~= 'base' then
+				-- If a Conda environment is active, activate it in the terminal
+				vim.fn.chansend(vim.b.terminal_job_id, "conda activate " .. conda_env .. "&& clear\n")
+			else
+				-- If no Conda environment is active, just clear the terminal
+				vim.fn.chansend(vim.b.terminal_job_id, "clear\n")
 			end
 		end
 	})
