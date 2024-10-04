@@ -1,6 +1,6 @@
 -- root_dir 판단 및 project tool (maven/gradle)판단 후, run 실행하는 함수
 
-local function project_runner_java()
+local function project_and_file_runner_java()
 	local root_dir = require('jdtls.setup').find_root({ 'pom.xml', 'build.gradle' })
 	if root_dir ~= nil then
 		-- [Check] Is this maven project file?
@@ -33,5 +33,5 @@ local function project_runner_java()
 end
 
 return {
-	project_runner_java = project_runner_java
+	project_and_file_runner_java = project_and_file_runner_java
 }

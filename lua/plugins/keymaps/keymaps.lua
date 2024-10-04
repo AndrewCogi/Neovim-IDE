@@ -152,7 +152,7 @@ end)
 mapKey("<leader>kr", function()
 	-- java
 	if vim.bo.filetype == 'java' then
-		require("utils.java.project_runner_java").project_runner_java()
+		require("utils.java.project_and_file_runner_java").project_and_file_runner_java()
 	-- python
 	elseif vim.bo.filetype == 'python' then
 		vim.cmd("split | term python3 " .. vim.fn.expand('%:p'))
