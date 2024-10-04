@@ -12,6 +12,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- DalMuDee IDE update 확인
+require("utils.autoUpdate").check_git_updates()
+
 -- basic 설정 적용
 require("basic.globals")
 require("basic.options")
