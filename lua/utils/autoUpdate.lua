@@ -12,7 +12,7 @@ local function check_git_updates()
 	end
 
 	-- 업데이트가 있으면 사용자에게 알림
-	local choice = vim.fn.input("A new version of your Neovim configuration is available. Do you want to update now and restart Neovim? (yes/no): ")
+	local choice = vim.fn.input("A new version of your Neovim configuration is available. Do you want to update now and restart Neovim? (yes/[no]): ")
 
 	if choice:lower() == "yes" then
 		-- lazy-lock.json 파일을 제외하고 업데이트
