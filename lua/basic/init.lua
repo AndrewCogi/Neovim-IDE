@@ -30,4 +30,3 @@ require("plugins.keymaps.keymaps")
 
 -- 추가 utils 적용
 require("utils.java.project_springboot_devtools_support_java")
-require("utils.python.activate_conda_in_terminal")
