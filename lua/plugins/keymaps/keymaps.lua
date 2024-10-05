@@ -63,7 +63,10 @@ end, "v")
 
 -- [Plugin] toggleterm.nvim
 -- normal 모드에서 터미널 창 띄우기(horizontal)
-mapKey("<leader>t", ":ToggleTerm dir=%p direction=horizontal<CR>")
+mapKey("<leader>t", function()
+	vim.api.nvim_set_vvar("should_check_conda", true)
+	vim.cmd(":ToggleTerm dir=%p direction=horizontal<CR>")
+end)
 -- normal 모드에서 터미널 창 띄우기(float)
 mapKey("<leader>T", ":ToggleTerm dir=%p direction=float<CR>")
 
