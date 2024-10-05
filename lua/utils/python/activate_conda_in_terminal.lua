@@ -4,9 +4,6 @@ local function activate_conda_in_terminal()
 	if conda_env ~= nil and conda_env ~= 'base' then
 		-- If a Conda environment is active, activate it in the terminal
 		vim.fn.chansend(vim.b.terminal_job_id, "conda activate " .. conda_env .. "&& clear\n")
-	else
-		-- If no Conda environment is active, just clear the terminal
-		vim.fn.chansend(vim.b.terminal_job_id, "clear\n")
 	end
 end
 
