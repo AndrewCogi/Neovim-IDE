@@ -62,10 +62,11 @@ end, "v")
 
 
 -- [Plugin] toggleterm.nvim
--- normal 모드에서 터미널 창 띄우기(horizontal)
-mapKey("<leader>t", ":ToggleTerm dir=%p direction=horizontal<CR>")
--- normal 모드에서 터미널 창 띄우기(float)
-mapKey("<leader>T", ":ToggleTerm dir=%p direction=float<CR>")
+-- normal 모드에서 터미널 창 열기
+mapKey("<leader>t", function()
+	vim.cmd(":ToggleTerm")
+	require("utils.python.activate_conda_in_terminal").activate_conda_in_terminal()
+end)
 
 
 -- [Plugin] gitsigns.nvim
