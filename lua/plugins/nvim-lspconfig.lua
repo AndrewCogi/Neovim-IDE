@@ -30,7 +30,7 @@ return {
 			'html', 		-- html (require npm)
 			'ts_ls',		-- js (require npm)
 			'jsonls',		-- json (require npm)
-			'pyright'		-- python
+			'ruff_lsp',		-- python
 		}
 
 		-- platform dependent LSP list
@@ -47,8 +47,10 @@ return {
 		require('mason-tool-installer').setup({
 			-- Install these linters, formatters, debuggers automatically
 			ensure_installed = {
+				-- Debugger (java, python)
 				'java-debug-adapter',
 				'java-test',
+				'debugpy',
 			},
 		})
 

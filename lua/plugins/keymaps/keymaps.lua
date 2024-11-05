@@ -156,7 +156,7 @@ mapKey("<leader>kr", function()
 		require("utils.java.project_and_file_runner_java").project_and_file_runner_java()
 	-- python
 	elseif vim.bo.filetype == 'python' then
-		vim.cmd("split | term python3 " .. vim.fn.expand('%:p'))
+		require("utils.python.file_runner_python").file_runner_python()
 	else
 		-- nothing
 	end
@@ -165,13 +165,19 @@ end)
 mapKey("<leader>kt", function()
 	if vim.bo.filetype == 'java' then
 		require("utils.java.project_tester_java").project_tester_java(true)
-		-- require("jdtls").test_class()
+	elseif vim.bo.filetype == 'python' then
+		require("utils.python.file_tester_python").file_tester_python()
+	else
+		-- nothing
 	end
 end)
 -- test current method
 mapKey("<leader>km", function()
 	if vim.bo.filetype == 'java' then
 		require("utils.java.project_tester_java").project_tester_java(false)
+	elseif vim.bo.filetype == 'python' then
+		require("utils.python.file_tester_python").file_tester_python()
+	else
 		-- require("jdtls").test_nearest_method()
 	end
 end)
@@ -192,7 +198,13 @@ mapKey("<leader>dB", function()
 end)
 -- normal 모드에서 continue (run debug)
 mapKey("<leader>dr", function()
-	require("utils.java.project_debugger_java").project_debugger_java()
+	if vim.bo.filetype == 'java' then
+		require("utils.java.project_debugger_java").project_debugger_java()
+	elseif vim.bo.filetype == 'python' then
+		require("utils.python.file_debugger_python").file_debugger_python()
+	else
+		-- nothing
+	end
 	-- require("dap").continue()
 end)
 -- normal 모드에서 go to line (no execute)
