@@ -131,28 +131,34 @@ mapKey("<leader>lr", ":LspRestart<CR>")
 mapKey("<leader>ko", function()
 	if vim.bo.filetype == 'dart' then
 		vim.cmd("FlutterOutlineToggle")
+	else
+		vim.notify("No configuration available for this file type: " .. vim.bo.filetype, vim.log.levels.WARN)
 	end
 end)
--- update projects config
+-- update project config
 mapKey("<leader>//", function()
 	if vim.bo.filetype == 'java' then
 		require("jdtls").update_projects_config()
 	elseif vim.bo.filetype == 'dart' then
 		vim.cmd(":FlutterPubGet")
 	else
-		-- nothing
+		vim.notify("No configuration available for this file type: " .. vim.bo.filetype, vim.log.levels.WARN)
 	end
 end)
 -- extract variable
 mapKey("<leader>xv", function()
 	if vim.bo.filetype == 'java' then
 		require("jdtls").extract_variable()
+	else
+		vim.notify("No configuration available for this file type: " .. vim.bo.filetype, vim.log.levels.WARN)
 	end
 end)
 -- make test / goto test
 mapKey("<leader>gt", function()
 	if vim.bo.filetype == 'java' then
 		require("jdtls.tests").goto_subjects()
+	else
+		vim.notify("No configuration available for this file type: " .. vim.bo.filetype, vim.log.levels.WARN)
 	end
 end)
 -- run
@@ -167,7 +173,7 @@ mapKey("<leader>kr", function()
 	elseif vim.bo.filetype == 'dart' then
 		vim.cmd(":FlutterRun")
 	else
-		-- nothing
+		vim.notify("No configuration available for this file type: " .. vim.bo.filetype, vim.log.levels.WARN)
 	end
 end)
 -- re-run(restart)
@@ -176,7 +182,7 @@ mapKey("<leader>kR", function ()
 	if vim.bo.filetype == 'dart' then
 		vim.cmd(":FlutterRestart")
 	else
-		-- nothing
+		vim.notify("No configuration available for this file type: " .. vim.bo.filetype, vim.log.levels.WARN)
 	end
 end)
 -- reload
@@ -185,16 +191,16 @@ mapKey("<leader>krr", function ()
 	if vim.bo.filetype == 'dart' then
 		vim.cmd(":FlutterReload")
 	else
-		-- nothing
+		vim.notify("No configuration available for this file type: " .. vim.bo.filetype, vim.log.levels.WARN)
 	end
 end)
--- quit(stop)
+-- quit(terminate)
 mapKey("<leader>kq", function()
 	-- flutter(dart)
 	if vim.bo.filetype == 'dart' then
 		vim.cmd(":FlutterQuit")
 	else
-		-- nothing
+		vim.notify("No configuration available for this file type: " .. vim.bo.filetype, vim.log.levels.WARN)
 	end
 end)
 -- test current class
@@ -202,9 +208,9 @@ mapKey("<leader>kt", function()
 	if vim.bo.filetype == 'java' then
 		require("utils.java.project_tester_java").project_tester_java(true)
 	elseif vim.bo.filetype == 'python' then
-		require("utils.python.file_tester_python").file_tester_python()
+		require("utils.python.file_tester_python").file_tester_python(true)
 	else
-		-- nothing
+		vim.notify("No configuration available for this file type: " .. vim.bo.filetype, vim.log.levels.WARN)
 	end
 end)
 -- test current method
@@ -212,9 +218,9 @@ mapKey("<leader>km", function()
 	if vim.bo.filetype == 'java' then
 		require("utils.java.project_tester_java").project_tester_java(false)
 	elseif vim.bo.filetype == 'python' then
-		require("utils.python.file_tester_python").file_tester_python()
+		require("utils.python.file_tester_python").file_tester_python(false)
 	else
-		-- require("jdtls").test_nearest_method()
+		vim.notify("No configuration available for this file type: " .. vim.bo.filetype, vim.log.levels.WARN)
 	end
 end)
 
