@@ -126,16 +126,22 @@ mapKey("<leader>fm", "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "v")
 mapKey("<leader>lr", ":LspRestart<CR>")
 
 
--- [Plugin] nvim-jdtls
--- organize imports
+-- [Plugin] nvim-jdtls, flutter-tools.nvim
+-- code outline (like widget tree)
 mapKey("<leader>ko", function()
-	if vim.bo.filetype == 'java' then
-		require("jdtls").organize_imports()
+	if vim.bo.filetype == 'dart' then
+		vim.cmd("FlutterOutlineToggle")
 	end
 end)
 -- update projects config
 mapKey("<leader>//", function()
-	require("jdtls").update_projects_config()
+	if vim.bo.filetype == 'java' then
+		require("jdtls").update_projects_config()
+	elseif vim.bo.filetype == 'dart' then
+		vim.cmd(":FlutterPubGet")
+	else
+		-- nothing
+	end
 end)
 -- extract variable
 mapKey("<leader>xv", function()
@@ -157,6 +163,36 @@ mapKey("<leader>kr", function()
 	-- python
 	elseif vim.bo.filetype == 'python' then
 		require("utils.python.file_runner_python").file_runner_python()
+	-- flutter(dart)
+	elseif vim.bo.filetype == 'dart' then
+		vim.cmd(":FlutterRun")
+	else
+		-- nothing
+	end
+end)
+-- re-run(restart)
+mapKey("<leader>kR", function ()
+	-- flutter(dart)
+	if vim.bo.filetype == 'dart' then
+		vim.cmd(":FlutterRestart")
+	else
+		-- nothing
+	end
+end)
+-- reload
+mapKey("<leader>krr", function ()
+	-- flutter(dart)
+	if vim.bo.filetype == 'dart' then
+		vim.cmd(":FlutterReload")
+	else
+		-- nothing
+	end
+end)
+-- quit(stop)
+mapKey("<leader>kq", function()
+	-- flutter(dart)
+	if vim.bo.filetype == 'dart' then
+		vim.cmd(":FlutterQuit")
 	else
 		-- nothing
 	end
@@ -183,7 +219,7 @@ mapKey("<leader>km", function()
 end)
 
 
--- [Plugin] nvim-dap
+-- [Plugin] nvim-dap, nvim-dap-python
 -- normal 모드에서 dap ui 열고 닫기
 mapKey("<leader>du", function()
 	require("dapui").toggle({})
