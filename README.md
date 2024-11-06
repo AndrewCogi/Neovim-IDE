@@ -7,37 +7,44 @@ My Personal Integrated Development Environment
 </h3>
 
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Anaconda](https://img.shields.io/badge/Anaconda-44A833?style=for-the-badge&logo=Anaconda&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=flutter&logoColor=white)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white)
-![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
-![Anaconda](https://img.shields.io/badge/Anaconda-44A833?style=flat-square&logo=Anaconda&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
-![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
-![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
+![Python](https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white)
+![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
+![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
+![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
+
 
 ## ☕ Introduction
 When I was serving in the military, the environment for programming was inadequate. So, I started this project with the idea of creating my own development environment.
 
 ## ✨Features
-- ✅ Available OS : Linux AMD, Linux ARM, MacOS Silicon/ARM, MacOS Intel/AMD
-- ✅ Spring Boot 3 Tools
-- ✅ Also support html, css, js
+- ✅ Supported OS: Linux AMD, Linux ARM, macOS Silicon/ARM, macOS Intel/AMD
+- ✅ Full-Stack Tool Support: Spring Boot (Maven/Gradle), Anaconda, Flutter, React
+- ✅ Supports HTML, CSS, JavaScript
 - ✅ Auto Completion & Diagnostics
-- ✅ Organize Imports & Code Formatting
+- ✅ Code Formatting & Code Actions
 - ✅ Run Debug & Tests
-- ✅ Code Actions
-- ✅ Build Tools (Maven/Gradle)
-- ✅ Works perfectly in CommandLine Interface
-- ✅ Use ssh, mosh to access and programing anytime, anywhere
+- ✅ Fully supports Command Line Interface (no mouse needed)
+- ✅ Quick access anytime, anywhere via SSH and mosh
+
+> [!NOTE]
+> GUI-based features for web and app development require a separate environment.
+
 
 ## ⚡️ Prerequisites
 
 * RAM 4GB (minimum 2GB)
 * Make sure `~/.config/nvim` is empty.
 * [Nerd Font](https://www.nerdfonts.com/) *(optional)*
+
 
 ## 🔨 Installation
 
@@ -46,6 +53,7 @@ When I was serving in the military, the environment for programming was inadequa
 ```bash
 source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master/installer/DalMuDee_IDE.sh)
 ```
+
 
 ## ⌨️ Key mapping
 
@@ -122,7 +130,7 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 | cs              | Change surrounding characters      |
 | S (visual mode) | Surround visual selection          |
 
-#### [Plugin] FTerm
+#### [Plugin] toggleterm.nvim
 | Keymap          | Description                   |
 | --------------- | ----------------------------- |
 | &lt;leader&gt;t | Toggle terminal               |
@@ -163,18 +171,22 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 | &lt;leader&gt;ac | Code action                                 |
 | &lt;leader&gt;rn | Rename symbol                               |
 | &lt;leader&gt;fm | Format code (normal and visual mode)        |
+| &lt;leader&gt;lr | Restart LSP server                          |
 
-#### [Plugin] nvim-jdtls
-| Keymap           | Description                                 |
-| ---------------- | ------------------------------------------- |
-| &lt;leader&gt;ko | Organize imports                            |
-| &lt;leader&gt;// | Update project configuration                |
-| &lt;leader&gt;xv | Extract variable                            |
-| &lt;leader&gt;tg | Generate test                               |
-| &lt;leader&gt;gt | Go to test                                  |
-| &lt;leader&gt;kr | Run project                                 |
-| &lt;leader&gt;kt | Test current class                          |
-| &lt;leader&gt;km | Test current method                         |
+#### [Plugin] nvim-jdtls, flutter-tools.nvim
+| Keymap            | Description                                 |
+| ----------------- | ------------------------------------------- |
+| &lt;leader&gt;ko  | Open/Close outline view                     |
+| &lt;leader&gt;//  | Update project configuration                |
+| &lt;leader&gt;xv  | Extract variable                            |
+| &lt;leader&gt;tg  | Generate test                               |
+| &lt;leader&gt;gt  | Go to test                                  |
+| &lt;leader&gt;kr  | Run project or file                         |
+| &lt;leader&gt;kR  | Restart project                             |
+| &lt;leader&gt;krr | Reload project                              |
+| &lt;leader&gt;kq  | Quit(Terminate) running project             |
+| &lt;leader&gt;kt  | Test current class                          |
+| &lt;leader&gt;km  | Test current method                         |
 
 #### [Plugin] nvim-dap
 | Keymap           | Description                                 |
