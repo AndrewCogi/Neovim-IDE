@@ -10,6 +10,7 @@ My Personal Integrated Development Environment
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Gradle](https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white)
 ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
+![Anaconda](https://img.shields.io/badge/Anaconda-44A833?style=flat-square&logo=Anaconda&logoColor=white)
 ![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
 ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -17,7 +18,7 @@ My Personal Integrated Development Environment
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ## ☕ Introduction
-When I was serving in the military, the environment for programming was inadequate. So, I started this project with the idea of creating my own development environment, specifically for <strong>Java</strong> and <strong>Spring Boot</strong>.
+When I was serving in the military, the environment for programming was inadequate. So, I started this project with the idea of creating my own development environment.
 
 ## ✨Features
 - ✅ Available OS : Linux AMD, Linux ARM, MacOS Silicon/ARM, MacOS Intel/AMD
