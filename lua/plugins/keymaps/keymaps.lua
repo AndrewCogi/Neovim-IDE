@@ -127,6 +127,14 @@ mapKey("<leader>lr", ":LspRestart<CR>")
 
 
 -- [Plugin] nvim-jdtls, flutter-tools.nvim
+-- organize imports
+mapKey("<leader>oo", function ()
+	if vim.bo.filetype == 'java' then
+		require("jdtls").organize_imports()
+	else
+		vim.notify("No configuration available for this file type: " .. vim.bo.filetype, vim.log.levels.WARN)
+	end
+end)
 -- code outline (like widget tree)
 mapKey("<leader>ko", function()
 	if vim.bo.filetype == 'dart' then

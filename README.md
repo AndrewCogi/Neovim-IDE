@@ -176,6 +176,7 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 #### [Plugin] nvim-jdtls, flutter-tools.nvim
 | Keymap            | Description                                 |
 | ----------------- | ------------------------------------------- |
+| &lt;leader&gt;oo  | Organize imports                            |
 | &lt;leader&gt;ko  | Open/Close outline view                     |
 | &lt;leader&gt;//  | Update project configuration                |
 | &lt;leader&gt;xv  | Extract variable                            |
