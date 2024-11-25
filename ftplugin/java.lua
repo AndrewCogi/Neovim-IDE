@@ -120,6 +120,17 @@ local config = {
 				--   profile = "GoogleStyle",
 				-- },
 			},
+			codeGeneration = {
+				toString = {
+					template = "${object.className}{${member.name()} = ${member.value}, ${otherMembers}}",
+				},
+				hashCodeEquals = {
+					useInstanceof = false,
+					useJava7Objects = true,
+				},
+				useBlocks = true,
+				insertLocation = true,
+			},
 		},
 		completion = {
 			favoriteStaticMembers = {
@@ -144,12 +155,6 @@ local config = {
 				starThreshold = 9999,
 				staticStarThreshold = 9999,
 			},
-		},
-		codeGeneration = {
-			toString = {
-				template = "${object.className}{${member.name()}=${member.value}, ${otherMembers}}",
-			},
-			useBlocks = true,
 		},
 	},
 	-- Needed for auto-completion with method signatures and placeholders
