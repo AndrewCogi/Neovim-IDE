@@ -1,5 +1,6 @@
 -- Cursor AI
 -- TODO : You should set API KEY to use
+-- ex) ~/.zshrc (~/.bashrc) export OPENAI_API_KEY="xxx"
 return {
 	"yetone/avante.nvim",
 	event = "VeryLazy",
