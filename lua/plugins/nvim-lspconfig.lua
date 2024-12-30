@@ -30,7 +30,7 @@ return {
 			'html', 		-- html (require npm)
 			'ts_ls',		-- js (require npm)
 			'jsonls',		-- json (require npm)
-			'ruff_lsp',		-- python
+			'pyright',		-- python
 		}
 
 		-- platform dependent LSP list
