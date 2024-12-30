@@ -45,6 +45,9 @@ When I was serving in the military, the environment for programming was inadequa
 * Make sure `~/.config/nvim` is empty.
 * [Nerd Font](https://www.nerdfonts.com/) *(optional)*
 
+> [!NOTE]
+> I highly recommend the Fira Code Nerd Font available in my GitHub root.
+
 
 ## 🔨 Installation
 
