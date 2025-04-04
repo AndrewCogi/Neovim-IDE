@@ -1,6 +1,6 @@
 # author : AndrewCogi
 # Dockerfile for DalMuDee-IDE (base)
-# Tag [base] : includes DalMuDee-IDE, Java 17, Python 3.12
+# Tag [base] : includes DalMuDee-IDE, Java 21, Python 3.12
 
 FROM ubuntu:24.04
 
@@ -20,7 +20,7 @@ RUN make CMAKE_BUILD_TYPE=Release
 RUN sudo make install
 WORKDIR $HOME
 RUN rm -rf $HOME/neovim-installer
-RUN apt install make zip gcc ripgrep jq npm openjdk-17-jdk -y
+RUN apt install make zip gcc ripgrep jq npm openjdk-21-jdk -y
 RUN rm -rf $HOME/.config/nvim
 RUN git clone https://github.com/AndrewCogi/DalMuDee_v2.git $HOME/.config/nvim
 

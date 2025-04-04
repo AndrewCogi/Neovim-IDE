@@ -4,33 +4,33 @@ local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 local workspace_dir = vim.env.HOME .. '/jdtls-workspace/' .. project_name
 
 -- 운영 체제에 따라 변수 설정
-local java_17_path
+local java_21_path
 local configuration_os
 local uname = vim.loop.os_uname().machine
 
 if vim.fn.has("macunix") == 1 then
 	if uname == "arm64" then
 		-- Mac ARM
-		java_17_path = '/opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home'
+		java_21_path = '/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home'
 		configuration_os = 'config_mac'
 	else
 		-- Mac AMD
-		java_17_path = '/usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home'
+		java_21_path = '/usr/local/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home'
 		configuration_os = 'config_mac'
 	end
 elseif vim.fn.has("unix") == 1 then
 	if uname == "aarch64" then
 		-- Linux ARM
-		java_17_path = '/usr/lib/jvm/java-17-openjdk-arm64'
+		java_21_path = '/usr/lib/jvm/java-21-openjdk-arm64'
 		configuration_os = 'config_linux'
 	else
 		-- Linux AMD
-		java_17_path = '/usr/lib/jvm/java-17-openjdk-amd64'
+		java_21_path = '/usr/lib/jvm/java-21-openjdk-amd64'
 		configuration_os = 'config_linux'
 	end
 else
 	-- Others
-	java_17_path = 'error; find this log in ~/.config/nvim/ftplugin/java.lua'
+	java_21_path = 'error; find this log in ~/.config/nvim/ftplugin/java.lua'
 	configuration_os = 'error; find this log in ~/.config/nvim/ftplugin/java.lua'
 end
 
@@ -75,8 +75,8 @@ local config = {
 	-- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
 	settings = {
 		java = {
-			-- TODO Replace this with the absolute path to your main java version (JDK 17 or higher)
-			home = java_17_path,
+			-- TODO Replace this with the absolute path to your main java version (JDK 21 or higher)
+			home = java_21_path,
 			eclipse = {
 				downloadSources = true,
 			},
@@ -89,14 +89,18 @@ local config = {
 					-- 	name = "JavaSE-11",
 					-- 	path = "/usr/lib/jvm/java-11-openjdk-amd64",
 					-- },
-					{
-						name = "JavaSE-17",
-						path = java_17_path,
-					},
+					-- {
+					-- 	name = "JavaSE-17",
+					-- 	path = "/usr/lib/jvm/java-17-openjdk-amd64",
+					-- },
 					-- {
 					-- 	name = "JavaSE-19",
 					-- 	path = "/usr/lib/jvm/java-19-openjdk-amd64",
-					-- }
+					-- },
+					{
+						name = "JavaSE-21",
+						path = java_21_path,
+					},
 				}
 			},
 			maven = {

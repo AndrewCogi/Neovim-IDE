@@ -76,8 +76,8 @@ case $architecture in
 		echo -e ${GREEN}"[DalMuDee_IDE (9/11)] Installing essential components for DalMuDee...(npm)"${NC}
 		sudo apt install npm -y
 
-		echo -e ${GREEN}"[DalMuDee_IDE (10/11)] Installing essential components for DalMuDee...(java 17)"${NC}
-		sudo apt install openjdk-17-jdk -y
+		echo -e ${GREEN}"[DalMuDee_IDE (10/11)] Installing essential components for DalMuDee...(java 21)"${NC}
+		sudo apt install openjdk-21-jdk -y
 
 		echo -e ${GREEN}"[DalMuDee_IDE (11/11)] Copying DalMuDee configuration file from git..."${NC}
 		rm -rf ~/.config/nvim
@@ -125,8 +125,8 @@ case $architecture in
 		echo -e ${GREEN}"[DalMuDee_IDE (9/11)] Installing essential components for DalMuDee...(npm)"${NC}
 		sudo apt install npm -y
 
-		echo -e ${GREEN}"[DalMuDee_IDE (10/11)] Installing essential components for DalMuDee...(java 17)"${NC}
-		sudo apt install openjdk-17-jdk -y
+		echo -e ${GREEN}"[DalMuDee_IDE (10/11)] Installing essential components for DalMuDee...(java 21)"${NC}
+		sudo apt install openjdk-21-jdk -y
 
 		echo -e ${GREEN}"[DalMuDee_IDE (11/11)] Copying DalMuDee configuration file from git..."${NC}
 		rm -rf ~/.config/nvim
@@ -165,9 +165,9 @@ case $architecture in
 		echo -e ${GREEN}"[DalMuDee_IDE (8/10)] Installing essential components for DalMuDee...(npm)"${NC}
 		brew install node
 
-		echo -e ${GREEN}"[DalMuDee_IDE (9/10)] Installing essential components for DalMuDee...(java 17)"${NC}
-		brew install openjdk@17
-		echo 'export JAVA_HOME=$(brew --prefix openjdk@17)/libexec/openjdk.jdk/Contents/Home' >> ~/.zshrc
+		echo -e ${GREEN}"[DalMuDee_IDE (9/10)] Installing essential components for DalMuDee...(java 21)"${NC}
+		brew install openjdk@21
+		echo 'export JAVA_HOME=$(brew --prefix openjdk@21)/libexec/openjdk.jdk/Contents/Home' >> ~/.zshrc
 		echo 'export PATH=$PATH:$JAVA_HOME/bin' >> ~/.zshrc
 		source ~/.zshrc
 
@@ -208,9 +208,9 @@ case $architecture in
 		echo -e ${GREEN}"[DalMuDee_IDE (8/10)] Installing essential components for DalMuDee...(npm)"${NC}
 		brew install node
 
-		echo -e ${GREEN}"[DalMuDee_IDE (9/10)] Installing essential components for DalMuDee...(java 17)"${NC}
-		brew install openjdk@17
-		echo 'export JAVA_HOME=$(brew --prefix openjdk@17)/libexec/openjdk.jdk/Contents/Home' >> ~/.zshrc
+		echo -e ${GREEN}"[DalMuDee_IDE (9/10)] Installing essential components for DalMuDee...(java 21)"${NC}
+		brew install openjdk@21
+		echo 'export JAVA_HOME=$(brew --prefix openjdk@21)/libexec/openjdk.jdk/Contents/Home' >> ~/.zshrc
 		echo 'export PATH=$PATH:$JAVA_HOME/bin' >> ~/.zshrc
 		source ~/.zshrc
 

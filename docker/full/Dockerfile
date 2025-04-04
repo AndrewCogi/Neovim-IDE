@@ -1,6 +1,6 @@
 # author : AndrewCogi
 # Dockerfile for DalMuDee-IDE (full)
-# Tag [full] : includes DalMuDee-IDE, Java 17, Python 3.12, Springboot 3, Anaconda, Build tools (Maven/Gradle)
+# Tag [full] : includes DalMuDee-IDE, Java 21, Python 3.12, Springboot 3, Anaconda, Build tools (Maven/Gradle)
 
 FROM chohyunsik/dalmudee-ide:base
 
