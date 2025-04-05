@@ -56,17 +56,6 @@ local function project_tester_java(is_class)
 						end
 					end
 				end,
-				on_stderr = function(_, data)
-					if not error_occured then
-						vim.schedule(function()
-							vim.notify(
-								"[project_tester_java] Preparation Failed.\nIf the problem persists, run 'mvn clean test-compile process-test-resources process-test-classes' manually.",
-								vim.log.levels.ERROR)
-							is_running = false
-							error_occured = true
-						end)
-					end
-				end,
 			}):start()
 		elseif vim.fn.filereadable(root_dir .. "/build.gradle") == 1 then
 			-- prepare test sources
@@ -124,13 +113,6 @@ local function project_tester_java(is_class)
 										end
 									end
 								end,
-								on_stderr = function(_, data)
-									if not error_occured then
-										vim.notify("[project_tester_java] Error while 'sh' command.", vim.log.levels.ERROR)
-										is_running = false
-										error_occured = true
-									end
-								end,
 							}):start()
 						end)
 					else
@@ -143,17 +125,6 @@ local function project_tester_java(is_class)
 								error_occured = true
 							end)
 						end
-					end
-				end,
-				on_stderr = function(_, data)
-					if not error_occured then
-						vim.schedule(function()
-							vim.notify(
-								"[project_tester_java] Preparation Failed.\nIf the problem persists, run 'gradle clean compileTestJava processTestResources testClasses' manually.",
-								vim.log.levels.ERROR)
-							is_running = false
-							error_occured = true
-						end)
 					end
 				end,
 			}):start()
