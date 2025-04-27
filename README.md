@@ -238,4 +238,4 @@ source <(curl -s https://raw.githubusercontent.com/AndrewCogi/DalMuDee_v2/master
 
 ## ❓ Help
 
-[How To Install Flutter SDK](https://velog.io/@okxooxoo/Flutter-Mac%EC%97%90-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%84%B8%ED%8C%85%ED%95%98%EA%B8%B0)
+[How To Install Flutter SDK](https://velog.io/@okxooxoo/Flutter-Mac%EC%97%90-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD-%EC%84%B8%ED%8C%85%ED%95%98%EA%B8%B0) 
